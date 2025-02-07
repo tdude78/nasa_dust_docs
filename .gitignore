@@ -1,0 +1,5 @@
+# .DS_Store files are created by macOS Finder to store custom view settings
+# Ignore .DS_Store files in the root directory and all subdirectories
+.DS_Store
+**/.DS_Store
+
