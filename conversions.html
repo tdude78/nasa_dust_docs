@@ -1,0 +1,1055 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Conversions &#8212; NASA Dust  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'conversions';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Sim Funcs" href="sim_funcs.html" />
+    <link rel="prev" title="Perturbations" href="perturbs.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">NASA Dust  documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="homepage.html">NASA Dust and Satpy_tools Documentation</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="satpy_tools.html">Satpy_tools</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="orbitalobjects.html">Orbital Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="propagators.html">Propagators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="perturbs.html">Perturbations</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Conversions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="sim_funcs.html">Sim Funcs</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/conversions.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Conversions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.rotx"><code class="docutils literal notranslate"><span class="pre">rotx()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.roty"><code class="docutils literal notranslate"><span class="pre">roty()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.rotz"><code class="docutils literal notranslate"><span class="pre">rotz()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.eci2ecef"><code class="docutils literal notranslate"><span class="pre">eci2ecef()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.ecef2eci"><code class="docutils literal notranslate"><span class="pre">ecef2eci()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.lla2eci"><code class="docutils literal notranslate"><span class="pre">lla2eci()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.eci2lla"><code class="docutils literal notranslate"><span class="pre">eci2lla()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.ecef2lla"><code class="docutils literal notranslate"><span class="pre">ecef2lla()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.eci2enu"><code class="docutils literal notranslate"><span class="pre">eci2enu()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.enu2eci"><code class="docutils literal notranslate"><span class="pre">enu2eci()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.eci2equinoc"><code class="docutils literal notranslate"><span class="pre">eci2equinoc()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.equinoc2eci"><code class="docutils literal notranslate"><span class="pre">equinoc2eci()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.kep2equinoc"><code class="docutils literal notranslate"><span class="pre">kep2equinoc()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.eci2kep"><code class="docutils literal notranslate"><span class="pre">eci2kep()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.kep2eci_nonsgp4"><code class="docutils literal notranslate"><span class="pre">kep2eci_nonsgp4()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.ecef2kep"><code class="docutils literal notranslate"><span class="pre">ecef2kep()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.kep2ecef"><code class="docutils literal notranslate"><span class="pre">kep2ecef()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.kep2eci"><code class="docutils literal notranslate"><span class="pre">kep2eci()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.teme_to_gcrf"><code class="docutils literal notranslate"><span class="pre">teme_to_gcrf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.tle2eci"><code class="docutils literal notranslate"><span class="pre">tle2eci()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.tle2ecef"><code class="docutils literal notranslate"><span class="pre">tle2ecef()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.tle2teme"><code class="docutils literal notranslate"><span class="pre">tle2teme()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.tle2kep"><code class="docutils literal notranslate"><span class="pre">tle2kep()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.parseTLE"><code class="docutils literal notranslate"><span class="pre">parseTLE()</span></code></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="conversions">
+<h1>Conversions<a class="headerlink" href="#conversions" title="Link to this heading">#</a></h1>
+<ol class="arabic simple" start="2">
+<li><p>Rotation about X-axis, Y-axis, and Z-axis</p></li>
+</ol>
+<dl class="py function">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.utils.conversions.rotx">
+<span class="sig-prename descclassname"><span class="pre">src_dust.satpy_tools.src.utils.conversions.</span></span><span class="sig-name descname"><span class="pre">rotx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#src_dust.satpy_tools.src.utils.conversions.rotx" title="Link to this definition">#</a></dt>
+<dd><p>Create a rotation matrix about the x-axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>theta</strong> (<em>float</em><em> or </em><em>int</em>) – Angle of rotation in radians.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A 3x3 rotation matrix representing a rotation about the x-axis.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.utils.conversions.roty">
+<span class="sig-prename descclassname"><span class="pre">src_dust.satpy_tools.src.utils.conversions.</span></span><span class="sig-name descname"><span class="pre">roty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#src_dust.satpy_tools.src.utils.conversions.roty" title="Link to this definition">#</a></dt>
+<dd><p>Create a rotation matrix about the y-axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>theta</strong> (<em>float</em><em> or </em><em>int</em>) – Angle of rotation in radians.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A 3x3 rotation matrix representing a rotation about the y-axis.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.utils.conversions.rotz">
+<span class="sig-prename descclassname"><span class="pre">src_dust.satpy_tools.src.utils.conversions.</span></span><span class="sig-name descname"><span class="pre">rotz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#src_dust.satpy_tools.src.utils.conversions.rotz" title="Link to this definition">#</a></dt>
+<dd><p>Create a rotation matrix about the z-axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>theta</strong> (<em>float</em><em> or </em><em>int</em>) – Angle of rotation in radians.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A 3x3 rotation matrix representing a rotation about the z-axis.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<ol class="arabic simple" start="3">
+<li><p>J2000 to ECEF</p></li>
+</ol>
+<dl class="py function">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.utils.conversions.eci2ecef">
+<span class="sig-prename descclassname"><span class="pre">src_dust.satpy_tools.src.utils.conversions.</span></span><span class="sig-name descname"><span class="pre">eci2ecef</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2451545.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#src_dust.satpy_tools.src.utils.conversions.eci2ecef" title="Link to this definition">#</a></dt>
+<dd><p>Convert a state vector from ECI to ECEF coordinates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state</strong> (<em>numpy.ndarray</em>) – The state vector in Earth-Centered Inertial (ECI) coordinates.
+Expected to be of length 6 or 7.</p></li>
+<li><p><strong>jd</strong> (<em>float</em><em> or </em><em>int</em><em>, </em><em>optional</em>) – The Julian date (default is 2451545.0).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The state vector in Earth-Centered Earth-Fixed (ECEF) coordinates,
+with the size element appended.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<ol class="arabic simple" start="4">
+<li><p>ECEF to J2000</p></li>
+</ol>
+<dl class="py function">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.utils.conversions.ecef2eci">
+<span class="sig-prename descclassname"><span class="pre">src_dust.satpy_tools.src.utils.conversions.</span></span><span class="sig-name descname"><span class="pre">ecef2eci</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2459714.2916666665</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#src_dust.satpy_tools.src.utils.conversions.ecef2eci" title="Link to this definition">#</a></dt>
+<dd><p>Convert a state vector from ECEF to ECI coordinates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state</strong> (<em>numpy.ndarray</em>) – The state vector in Earth-Centered Earth-Fixed (ECEF) coordinates.</p></li>
+<li><p><strong>jd</strong> (<em>float</em><em> or </em><em>int</em><em>, </em><em>optional</em>) – The Julian date (default is JD_STANDARD).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The state vector in Earth-Centered Inertial (ECI) coordinates.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<ol class="arabic simple" start="5">
+<li><p>Lat-Lon-Alt to J2000</p></li>
+</ol>
+<dl class="py function">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.utils.conversions.lla2eci">
+<span class="sig-prename descclassname"><span class="pre">src_dust.satpy_tools.src.utils.conversions.</span></span><span class="sig-name descname"><span class="pre">lla2eci</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lla</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2459714.2916666665</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#src_dust.satpy_tools.src.utils.conversions.lla2eci" title="Link to this definition">#</a></dt>
+<dd><p>Convert geodetic coordinates (LLA) to ECI coordinates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lla</strong> (<em>numpy.ndarray</em>) – The latitude, longitude, and altitude vector. Altitude is in kilometers.</p></li>
+<li><p><strong>deg</strong> (<em>bool</em>) – If True, the latitude and longitude are provided in degrees;
+otherwise, in radians.</p></li>
+<li><p><strong>jd</strong> (<em>float</em><em> or </em><em>int</em><em>, </em><em>optional</em>) – The Julian date (default is JD_STANDARD).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The state vector in ECI coordinates (only the position components).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<ol class="arabic simple" start="6">
+<li><p>J2000 to Lat-Lon-Alt</p></li>
+</ol>
+<dl class="py function">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.utils.conversions.eci2lla">
+<span class="sig-prename descclassname"><span class="pre">src_dust.satpy_tools.src.utils.conversions.</span></span><span class="sig-name descname"><span class="pre">eci2lla</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2459714.2916666665</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#src_dust.satpy_tools.src.utils.conversions.eci2lla" title="Link to this definition">#</a></dt>
+<dd><p>Convert a state vector from ECI to geodetic coordinates (LLA).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state</strong> (<em>numpy.ndarray</em>) – The state vector in Earth-Centered Inertial (ECI) coordinates.</p></li>
+<li><p><strong>deg</strong> (<em>bool</em>) – If True, the resulting latitude and longitude will be in degrees;
+otherwise, in radians.</p></li>
+<li><p><strong>jd</strong> (<em>float</em><em> or </em><em>int</em><em>, </em><em>optional</em>) – The Julian date (default is JD_STANDARD).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The state vector in geodetic coordinates (latitude, longitude, altitude).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<ol class="arabic simple" start="7">
+<li><p>ECEF to Lat-Lon-Alt</p></li>
+</ol>
+<dl class="py function">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.utils.conversions.ecef2lla">
+<span class="sig-prename descclassname"><span class="pre">src_dust.satpy_tools.src.utils.conversions.</span></span><span class="sig-name descname"><span class="pre">ecef2lla</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2459714.2916666665</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#src_dust.satpy_tools.src.utils.conversions.ecef2lla" title="Link to this definition">#</a></dt>
+<dd><p>Convert a state vector from ECEF to geodetic coordinates (LLA).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state</strong> (<em>numpy.ndarray</em>) – The state vector in Earth-Centered Earth-Fixed (ECEF) coordinates.</p></li>
+<li><p><strong>deg</strong> (<em>bool</em>) – If True, the resulting latitude and longitude will be in degrees;
+otherwise, in radians.</p></li>
+<li><p><strong>jd</strong> (<em>float</em><em> or </em><em>int</em><em>, </em><em>optional</em>) – The Julian date (default is JD_STANDARD).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The state vector in geodetic coordinates: [latitude, longitude, altitude, size].</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<ol class="arabic simple" start="8">
+<li><p>J2000 to ENU</p></li>
+</ol>
+<dl class="py function">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.utils.conversions.eci2enu">
+<span class="sig-prename descclassname"><span class="pre">src_dust.satpy_tools.src.utils.conversions.</span></span><span class="sig-name descname"><span class="pre">eci2enu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">latlonel_observer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2459714.2916666665</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#src_dust.satpy_tools.src.utils.conversions.eci2enu" title="Link to this definition">#</a></dt>
+<dd><p>Convert a state vector from ECI to local ENU coordinates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state</strong> (<em>numpy.ndarray</em>) – The state vector in Earth-Centered Inertial (ECI) coordinates.</p></li>
+<li><p><strong>latlonel_observer</strong> (<em>numpy.ndarray</em>) – The observer’s geodetic coordinates [latitude, longitude, altitude].</p></li>
+<li><p><strong>jd</strong> (<em>float</em><em> or </em><em>int</em><em>, </em><em>optional</em>) – The Julian date (default is JD_STANDARD).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The state vector in East-North-Up (ENU) coordinates.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<ol class="arabic simple" start="9">
+<li><p>ENU to J2000</p></li>
+</ol>
+<dl class="py function">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.utils.conversions.enu2eci">
+<span class="sig-prename descclassname"><span class="pre">src_dust.satpy_tools.src.utils.conversions.</span></span><span class="sig-name descname"><span class="pre">enu2eci</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">latlonel_observer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2459714.2916666665</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#src_dust.satpy_tools.src.utils.conversions.enu2eci" title="Link to this definition">#</a></dt>
+<dd><p>Convert a state vector from local ENU to ECI coordinates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state</strong> (<em>numpy.ndarray</em>) – The state vector in East-North-Up (ENU) coordinates.</p></li>
+<li><p><strong>latlonel_observer</strong> (<em>numpy.ndarray</em>) – The observer’s geodetic coordinates [latitude, longitude, altitude].</p></li>
+<li><p><strong>jd</strong> (<em>float</em><em> or </em><em>int</em><em>, </em><em>optional</em>) – The Julian date (default is JD_STANDARD).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The state vector in Earth-Centered Inertial (ECI) coordinates.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<ol class="arabic simple" start="10">
+<li><p>J2000 to Equinoctial</p></li>
+</ol>
+<dl class="py function">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.utils.conversions.eci2equinoc">
+<span class="sig-prename descclassname"><span class="pre">src_dust.satpy_tools.src.utils.conversions.</span></span><span class="sig-name descname"><span class="pre">eci2equinoc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#src_dust.satpy_tools.src.utils.conversions.eci2equinoc" title="Link to this definition">#</a></dt>
+<dd><p>Convert a state vector from ECI coordinates to equinoctial orbital elements.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>state</strong> (<em>numpy.ndarray</em>) – The state vector in Earth-Centered Inertial (ECI) coordinates.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A vector of equinoctial elements [a, h, k, p, q, λ, size].</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<ol class="arabic simple" start="11">
+<li><p>Equinoctial to J2000</p></li>
+</ol>
+<dl class="py function">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.utils.conversions.equinoc2eci">
+<span class="sig-prename descclassname"><span class="pre">src_dust.satpy_tools.src.utils.conversions.</span></span><span class="sig-name descname"><span class="pre">equinoc2eci</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elems</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#src_dust.satpy_tools.src.utils.conversions.equinoc2eci" title="Link to this definition">#</a></dt>
+<dd><p>Convert equinoctial orbital elements to an ECI state vector using a C wrapper.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>elems</strong> (<em>numpy.ndarray</em>) – Equinoctial elements of shape (6,) or (7,). If 7 elements are provided,
+the last element is an extra parameter (size).</p></li>
+<li><p><strong>t</strong> (<em>float</em><em>, </em><em>optional</em>) – Time offset parameter (default is 0.0).</p></li>
+<li><p><strong>t0</strong> (<em>float</em><em>, </em><em>optional</em>) – Reference time parameter (default is 0.0).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The resulting ECI state vector of shape (7,), with the extra element appended.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<ol class="arabic simple" start="12">
+<li><p>Keplerian to Equinoctial</p></li>
+</ol>
+<dl class="py function">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.utils.conversions.kep2equinoc">
+<span class="sig-prename descclassname"><span class="pre">src_dust.satpy_tools.src.utils.conversions.</span></span><span class="sig-name descname"><span class="pre">kep2equinoc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#src_dust.satpy_tools.src.utils.conversions.kep2equinoc" title="Link to this definition">#</a></dt>
+<dd><p>Convert Keplerian elements to equinoctial orbital elements.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state</strong> (<em>numpy.ndarray</em>) – The state vector containing Keplerian elements.</p></li>
+<li><p><strong>deg</strong> (<em>bool</em>) – If True, the input angular elements are in degrees; otherwise, in radians.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The state vector in equinoctial coordinates [a, h, k, p, q, λ, size].</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<ol class="arabic simple" start="13">
+<li><p>J2000 to Keplerian</p></li>
+</ol>
+<dl class="py function">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.utils.conversions.eci2kep">
+<span class="sig-prename descclassname"><span class="pre">src_dust.satpy_tools.src.utils.conversions.</span></span><span class="sig-name descname"><span class="pre">eci2kep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2459714.2916666665</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#src_dust.satpy_tools.src.utils.conversions.eci2kep" title="Link to this definition">#</a></dt>
+<dd><p>Convert a state vector from ECI coordinates to Keplerian orbital elements.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state</strong> (<em>numpy.ndarray</em>) – The state vector in Earth-Centered Inertial (ECI) coordinates.</p></li>
+<li><p><strong>deg</strong> (<em>bool</em>) – If True, the angular elements of the output are in degrees; otherwise, in radians.</p></li>
+<li><p><strong>jd</strong> (<em>float</em><em> or </em><em>int</em><em>, </em><em>optional</em>) – The Julian date (default is JD_STANDARD).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The Keplerian elements [a, e, i, Ω, ω, M, size].</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<ol class="arabic simple" start="14">
+<li><p>Keplerian to J2000 (non SGP4)</p></li>
+</ol>
+<dl class="py function">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.utils.conversions.kep2eci_nonsgp4">
+<span class="sig-prename descclassname"><span class="pre">src_dust.satpy_tools.src.utils.conversions.</span></span><span class="sig-name descname"><span class="pre">kep2eci_nonsgp4</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2459714.2916666665</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#src_dust.satpy_tools.src.utils.conversions.kep2eci_nonsgp4" title="Link to this definition">#</a></dt>
+<dd><p>Convert Keplerian elements to an ECI state vector without using SGP4 propagation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state</strong> (<em>numpy.ndarray</em>) – The state vector in Keplerian elements.</p></li>
+<li><p><strong>deg</strong> (<em>bool</em>) – If True, the input elements are in degrees; otherwise, in radians.</p></li>
+<li><p><strong>jd</strong> (<em>float</em><em> or </em><em>int</em><em>, </em><em>optional</em>) – The Julian date (default is JD_STANDARD).</p></li>
+<li><p><strong>size</strong> (<em>int</em><em>, </em><em>optional</em>) – An extra size parameter (default is 0).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The state vector in ECI coordinates.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<ol class="arabic simple" start="15">
+<li><p>ECEF to Keplerian</p></li>
+</ol>
+<dl class="py function">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.utils.conversions.ecef2kep">
+<span class="sig-prename descclassname"><span class="pre">src_dust.satpy_tools.src.utils.conversions.</span></span><span class="sig-name descname"><span class="pre">ecef2kep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2459714.2916666665</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#src_dust.satpy_tools.src.utils.conversions.ecef2kep" title="Link to this definition">#</a></dt>
+<dd><p>Convert a Cartesian state vector (ECEF) to Keplerian orbital elements.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state</strong> (<em>numpy.ndarray</em>) – The state vector in Cartesian (ECEF) coordinates.</p></li>
+<li><p><strong>deg</strong> (<em>bool</em>) – If True, the angular elements in the output are in degrees; otherwise, in radians.</p></li>
+<li><p><strong>jd</strong> (<em>float</em><em> or </em><em>int</em><em>, </em><em>optional</em>) – The Julian date (default is JD_STANDARD).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The Keplerian elements [a, e, i, Ω, ω, M, size].</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If a computed angular element is NaN or if eccentricity exceeds 1.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<ol class="arabic simple" start="16">
+<li><p>Keplerian to ECEF</p></li>
+</ol>
+<dl class="py function">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.utils.conversions.kep2ecef">
+<span class="sig-prename descclassname"><span class="pre">src_dust.satpy_tools.src.utils.conversions.</span></span><span class="sig-name descname"><span class="pre">kep2ecef</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#src_dust.satpy_tools.src.utils.conversions.kep2ecef" title="Link to this definition">#</a></dt>
+<dd><p>Convert Keplerian elements to a Cartesian state vector (ECEF).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state</strong> (<em>numpy.ndarray</em>) – The state vector in Keplerian elements.</p></li>
+<li><p><strong>deg</strong> (<em>bool</em>) – If True, the angular elements are provided in degrees; otherwise, in radians.</p></li>
+<li><p><strong>size</strong> (<em>int</em><em>, </em><em>optional</em>) – An extra size parameter (default is 0).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The state vector in Cartesian (ECEF) coordinates.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<ol class="arabic simple" start="17">
+<li><p>Keplerian to ECI</p></li>
+</ol>
+<dl class="py function">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.utils.conversions.kep2eci">
+<span class="sig-prename descclassname"><span class="pre">src_dust.satpy_tools.src.utils.conversions.</span></span><span class="sig-name descname"><span class="pre">kep2eci</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2459714.2916666665</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#src_dust.satpy_tools.src.utils.conversions.kep2eci" title="Link to this definition">#</a></dt>
+<dd><p>Convert Keplerian elements to an ECI state vector using the SGP4 model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state</strong> (<em>numpy.ndarray</em>) – The state vector in Keplerian elements.</p></li>
+<li><p><strong>deg</strong> (<em>bool</em>) – If True, the angular elements are provided in degrees; otherwise, in radians.</p></li>
+<li><p><strong>jd</strong> (<em>float</em><em> or </em><em>int</em><em>, </em><em>optional</em>) – The Julian date (default is JD_STANDARD).</p></li>
+<li><p><strong>size</strong> (<em>int</em><em>, </em><em>optional</em>) – An extra size parameter (default is 0).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The state vector in Earth-Centered Inertial (ECI) coordinates.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<ol class="arabic simple" start="18">
+<li><p>TEME to GCRS</p></li>
+</ol>
+<dl class="py function">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.utils.conversions.teme_to_gcrf">
+<span class="sig-prename descclassname"><span class="pre">src_dust.satpy_tools.src.utils.conversions.</span></span><span class="sig-name descname"><span class="pre">teme_to_gcrf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_teme</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.satpy_tools.src.utils.conversions.teme_to_gcrf" title="Link to this definition">#</a></dt>
+<dd><p>Convert a state vector from the TEME frame to the GCRS (ECI) frame.</p>
+<p>The transformation uses Astropy coordinate transformations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state_teme</strong> (<em>numpy.ndarray</em>) – The state vector in TEME coordinates. The position is in kilometers and the
+velocity in kilometers per second.</p></li>
+<li><p><strong>jd</strong> (<em>float</em>) – The Julian date corresponding to the state vector.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The state vector in GCRS (ECI) coordinates with the extra size element appended.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<ol class="arabic simple" start="19">
+<li><p>TLE to J2000</p></li>
+</ol>
+<dl class="py function">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.utils.conversions.tle2eci">
+<span class="sig-prename descclassname"><span class="pre">src_dust.satpy_tools.src.utils.conversions.</span></span><span class="sig-name descname"><span class="pre">tle2eci</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">line1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CD</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.satpy_tools.src.utils.conversions.tle2eci" title="Link to this definition">#</a></dt>
+<dd><p>Convert Two-Line Element (TLE) data to an ECI state vector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>line1</strong> (<em>str</em>) – The first line of the TLE.</p></li>
+<li><p><strong>line2</strong> (<em>str</em>) – The second line of the TLE.</p></li>
+<li><p><strong>CD</strong> (<em>float</em><em>, </em><em>optional</em>) – Drag coefficient (default is 2.2).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><p>A tuple containing:</p>
+<ul class="simple">
+<li><p><strong>eci</strong> (numpy.ndarray): The ECI state vector.</p></li>
+<li><p><strong>jd</strong> (float): The Julian date corresponding to the TLE epoch.</p></li>
+<li><p><strong>norad</strong> (str): The NORAD identifier extracted from the TLE.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<ol class="arabic simple" start="20">
+<li><p>TLE to ECEF</p></li>
+</ol>
+<dl class="py function">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.utils.conversions.tle2ecef">
+<span class="sig-prename descclassname"><span class="pre">src_dust.satpy_tools.src.utils.conversions.</span></span><span class="sig-name descname"><span class="pre">tle2ecef</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">line1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CD</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.satpy_tools.src.utils.conversions.tle2ecef" title="Link to this definition">#</a></dt>
+<dd><p>Convert Two-Line Element (TLE) data to an ECEF state vector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>line1</strong> (<em>str</em>) – The first line of the TLE.</p></li>
+<li><p><strong>line2</strong> (<em>str</em>) – The second line of the TLE.</p></li>
+<li><p><strong>CD</strong> (<em>float</em><em>, </em><em>optional</em>) – Drag coefficient (default is 2.2).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><p>A tuple containing:</p>
+<ul class="simple">
+<li><p><strong>ecef</strong> (numpy.ndarray): The ECEF state vector.</p></li>
+<li><p><strong>jd</strong> (float): The Julian date corresponding to the TLE epoch.</p></li>
+<li><p><strong>norad</strong> (str): The NORAD identifier extracted from the TLE.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<ol class="arabic simple" start="21">
+<li><p>TLE to TEME</p></li>
+</ol>
+<dl class="py function">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.utils.conversions.tle2teme">
+<span class="sig-prename descclassname"><span class="pre">src_dust.satpy_tools.src.utils.conversions.</span></span><span class="sig-name descname"><span class="pre">tle2teme</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">line1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CD</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.satpy_tools.src.utils.conversions.tle2teme" title="Link to this definition">#</a></dt>
+<dd><p>Convert Two-Line Element (TLE) data to a TEME state vector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>line1</strong> (<em>str</em>) – The first line of the TLE.</p></li>
+<li><p><strong>line2</strong> (<em>str</em>) – The second line of the TLE.</p></li>
+<li><p><strong>CD</strong> (<em>float</em><em>, </em><em>optional</em>) – Drag coefficient (default is 2.2).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><p>A tuple containing:</p>
+<ul class="simple">
+<li><p><strong>pos_prop</strong> (numpy.ndarray): The TEME state vector (position and velocity).</p></li>
+<li><p><strong>prop_jd</strong> (float): The propagated Julian date from the TLE epoch.</p></li>
+<li><p><strong>norad</strong> (str): The NORAD identifier extracted from the TLE.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<ol class="arabic simple" start="22">
+<li><p>TLE to Keplerian</p></li>
+</ol>
+<dl class="py function">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.utils.conversions.tle2kep">
+<span class="sig-prename descclassname"><span class="pre">src_dust.satpy_tools.src.utils.conversions.</span></span><span class="sig-name descname"><span class="pre">tle2kep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">line1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CD</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.satpy_tools.src.utils.conversions.tle2kep" title="Link to this definition">#</a></dt>
+<dd><p>Convert Two-Line Element (TLE) data to Keplerian orbital elements.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>line1</strong> (<em>str</em>) – The first line of the TLE.</p></li>
+<li><p><strong>line2</strong> (<em>str</em>) – The second line of the TLE.</p></li>
+<li><p><strong>CD</strong> (<em>float</em><em>, </em><em>optional</em>) – Drag coefficient (default is 2.2).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><p>A tuple containing:</p>
+<ul class="simple">
+<li><p><strong>kep</strong> (numpy.ndarray): The Keplerian elements [a, e, i, RAAN, ω, M, B_star].</p></li>
+<li><p><strong>jd</strong> (float): The Julian date corresponding to the TLE epoch.</p></li>
+<li><p><strong>norad</strong> (str): The NORAD identifier extracted from the TLE.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<ol class="arabic simple" start="23">
+<li><p>Parse TLE</p></li>
+</ol>
+<dl class="py function">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.utils.conversions.parseTLE">
+<span class="sig-prename descclassname"><span class="pre">src_dust.satpy_tools.src.utils.conversions.</span></span><span class="sig-name descname"><span class="pre">parseTLE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">line1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CD</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.satpy_tools.src.utils.conversions.parseTLE" title="Link to this definition">#</a></dt>
+<dd><p>Parse Two-Line Element (TLE) data and extract orbital parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>line1</strong> (<em>str</em>) – The first line of the TLE.</p></li>
+<li><p><strong>line2</strong> (<em>str</em>) – The second line of the TLE.</p></li>
+<li><p><strong>deg</strong> (<em>bool</em>) – If True, the angular elements are converted to radians.</p></li>
+<li><p><strong>CD</strong> (<em>float</em><em>, </em><em>optional</em>) – Drag coefficient (default is 2.2).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><p>A tuple containing:</p>
+<ul class="simple">
+<li><p><strong>elems</strong> (numpy.ndarray): An array with the elements
+[a, e, i, RAAN, ω, M, B_star].</p></li>
+<li><p><strong>jd</strong> (float): The Julian date corresponding to the TLE epoch.</p></li>
+<li><p><strong>norad</strong> (str): The NORAD identifier extracted from the TLE.</p></li>
+<li><p><strong>Am_ratio</strong> (float): The area-to-mass ratio derived from B_star and CD.</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="perturbs.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Perturbations</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="sim_funcs.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Sim Funcs</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.rotx"><code class="docutils literal notranslate"><span class="pre">rotx()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.roty"><code class="docutils literal notranslate"><span class="pre">roty()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.rotz"><code class="docutils literal notranslate"><span class="pre">rotz()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.eci2ecef"><code class="docutils literal notranslate"><span class="pre">eci2ecef()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.ecef2eci"><code class="docutils literal notranslate"><span class="pre">ecef2eci()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.lla2eci"><code class="docutils literal notranslate"><span class="pre">lla2eci()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.eci2lla"><code class="docutils literal notranslate"><span class="pre">eci2lla()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.ecef2lla"><code class="docutils literal notranslate"><span class="pre">ecef2lla()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.eci2enu"><code class="docutils literal notranslate"><span class="pre">eci2enu()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.enu2eci"><code class="docutils literal notranslate"><span class="pre">enu2eci()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.eci2equinoc"><code class="docutils literal notranslate"><span class="pre">eci2equinoc()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.equinoc2eci"><code class="docutils literal notranslate"><span class="pre">equinoc2eci()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.kep2equinoc"><code class="docutils literal notranslate"><span class="pre">kep2equinoc()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.eci2kep"><code class="docutils literal notranslate"><span class="pre">eci2kep()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.kep2eci_nonsgp4"><code class="docutils literal notranslate"><span class="pre">kep2eci_nonsgp4()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.ecef2kep"><code class="docutils literal notranslate"><span class="pre">ecef2kep()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.kep2ecef"><code class="docutils literal notranslate"><span class="pre">kep2ecef()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.kep2eci"><code class="docutils literal notranslate"><span class="pre">kep2eci()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.teme_to_gcrf"><code class="docutils literal notranslate"><span class="pre">teme_to_gcrf()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.tle2eci"><code class="docutils literal notranslate"><span class="pre">tle2eci()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.tle2ecef"><code class="docutils literal notranslate"><span class="pre">tle2ecef()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.tle2teme"><code class="docutils literal notranslate"><span class="pre">tle2teme()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.tle2kep"><code class="docutils literal notranslate"><span class="pre">tle2kep()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.utils.conversions.parseTLE"><code class="docutils literal notranslate"><span class="pre">parseTLE()</span></code></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Truman DeWalch, Riley Fitzgerald, Isaac Payne
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Truman DeWalch, Riley Fitzgerald, Isaac Payne.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,715 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Sim Funcs &#8212; NASA Dust  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'sim_funcs';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Conversions" href="conversions.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">NASA Dust  documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="homepage.html">NASA Dust and Satpy_tools Documentation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="satpy_tools.html">Satpy_tools</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="orbitalobjects.html">Orbital Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="propagators.html">Propagators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="perturbs.html">Perturbations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conversions.html">Conversions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Sim Funcs</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/sim_funcs.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Sim Funcs</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.sim_funcs._gaussint"><code class="docutils literal notranslate"><span class="pre">_gaussint()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.sim_funcs.DustHit_NewStrategy"><code class="docutils literal notranslate"><span class="pre">DustHit_NewStrategy</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.sim_funcs.DustHit_NewStrategy.dust_means"><code class="docutils literal notranslate"><span class="pre">DustHit_NewStrategy.dust_means</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.sim_funcs.DustHit_NewStrategy.dust_covars"><code class="docutils literal notranslate"><span class="pre">DustHit_NewStrategy.dust_covars</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.sim_funcs.DustHit_NewStrategy.plot"><code class="docutils literal notranslate"><span class="pre">DustHit_NewStrategy.plot</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.sim_funcs.DustHit_NewStrategy.ws"><code class="docutils literal notranslate"><span class="pre">DustHit_NewStrategy.ws</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.sim_funcs.DustHit_NewStrategy.v_unit_sat"><code class="docutils literal notranslate"><span class="pre">DustHit_NewStrategy.v_unit_sat</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.sim_funcs.DustHit_NewStrategy.dust_means_proj"><code class="docutils literal notranslate"><span class="pre">DustHit_NewStrategy.dust_means_proj</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.sim_funcs.DustHit_NewStrategy.dust_covars_proj"><code class="docutils literal notranslate"><span class="pre">DustHit_NewStrategy.dust_covars_proj</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.sim_funcs.DustHit_NewStrategy.sat_mean_proj"><code class="docutils literal notranslate"><span class="pre">DustHit_NewStrategy.sat_mean_proj</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.sim_funcs.DustHit_NewStrategy.sat_covar_proj"><code class="docutils literal notranslate"><span class="pre">DustHit_NewStrategy.sat_covar_proj</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.sim_funcs.DustHit_NewStrategy.r_sat"><code class="docutils literal notranslate"><span class="pre">DustHit_NewStrategy.r_sat</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.sim_funcs.DustHit_NewStrategy.sat_std"><code class="docutils literal notranslate"><span class="pre">DustHit_NewStrategy.sat_std</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.sim_funcs.DustHit_NewStrategy.get_convdist_func"><code class="docutils literal notranslate"><span class="pre">DustHit_NewStrategy.get_convdist_func()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.sim_funcs.DustHit_NewStrategy.get_crossings"><code class="docutils literal notranslate"><span class="pre">DustHit_NewStrategy.get_crossings()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.sim_funcs._get_conv_gmm_value"><code class="docutils literal notranslate"><span class="pre">_get_conv_gmm_value()</span></code></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="sim-funcs">
+<h1>Sim Funcs<a class="headerlink" href="#sim-funcs" title="Link to this heading">#</a></h1>
+<ol class="arabic simple">
+<li><p>Testing</p></li>
+</ol>
+<dl class="py function">
+<dt class="sig sig-object py" id="src_dust.sim_funcs._gaussint">
+<span class="sig-prename descclassname"><span class="pre">src_dust.sim_funcs.</span></span><span class="sig-name descname"><span class="pre">_gaussint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">P</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">terms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.sim_funcs._gaussint" title="Link to this definition">#</a></dt>
+<dd><p>Compute the Gaussian integral with optional higher-order terms.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>P</strong> (<em>numpy.ndarray</em>) – A 2x2 positive-definite matrix.</p></li>
+<li><p><strong>x</strong> (<em>float</em>) – x-coordinate of the point.</p></li>
+<li><p><strong>y</strong> (<em>float</em>) – y-coordinate of the point.</p></li>
+<li><p><strong>r</strong> (<em>float</em>) – Radius of the satellite.</p></li>
+<li><p><strong>terms</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of terms to include in the expansion (default is 3).</p></li>
+<li><p><strong>log</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, return the logarithm of the result (default is False).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The computed Gaussian integral value (or its logarithm if <code class="docutils literal notranslate"><span class="pre">log=True</span></code>).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<ul class="simple">
+<li><p>The function computes the Gaussian integral using the inverse of matrix P.</p></li>
+<li><p>Higher-order terms are included based on the value of <code class="docutils literal notranslate"><span class="pre">terms</span></code>.</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">log</span></code> is True, the logarithm of the result is returned.</p></li>
+</ul>
+</dd></dl>
+
+<ol class="arabic simple" start="2">
+<li><p>Testing class docs</p></li>
+</ol>
+<dl class="py class">
+<dt class="sig sig-object py" id="src_dust.sim_funcs.DustHit_NewStrategy">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src_dust.sim_funcs.</span></span><span class="sig-name descname"><span class="pre">DustHit_NewStrategy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dust_means_inp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dust_covars_inp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sat_mean</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sat_covar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_unit_sat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r_sat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ws</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.sim_funcs.DustHit_NewStrategy" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class for calculating the probability of a dust grain hitting a satellite.</p>
+<p>This class computes the probability of collision by projecting dust states
+and the satellite state onto a common subspace and then evaluating the convolution
+of the corresponding Gaussian mixtures.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dust_means_inp</strong> (<em>numpy.ndarray</em>) – Array of dust mean vectors (at least the first three columns represent position) in km.</p></li>
+<li><p><strong>dust_covars_inp</strong> (<em>numpy.ndarray</em>) – Array of dust covariance matrices (first three rows/columns correspond to position).</p></li>
+<li><p><strong>sat_mean</strong> (<em>numpy.ndarray</em>) – Mean state vector of the satellite (first three elements represent position) in km.</p></li>
+<li><p><strong>sat_covar</strong> (<em>numpy.ndarray</em>) – Covariance matrix of the satellite (first three rows/columns correspond to position).</p></li>
+<li><p><strong>v_unit_sat</strong> (<em>numpy.ndarray</em>) – Unit vector of the satellite’s velocity.</p></li>
+<li><p><strong>r_sat</strong> (<em>float</em>) – Radius of the satellite (in m).</p></li>
+<li><p><strong>ws</strong> (<em>numpy.ndarray</em>) – Weights for the dust particles.</p></li>
+<li><p><strong>plot</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to plot the simulation (default is False).</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src_dust.sim_funcs.DustHit_NewStrategy.dust_means">
+<span class="sig-name descname"><span class="pre">dust_means</span></span><a class="headerlink" href="#src_dust.sim_funcs.DustHit_NewStrategy.dust_means" title="Link to this definition">#</a></dt>
+<dd><p>Array of dust mean vectors (positions only).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src_dust.sim_funcs.DustHit_NewStrategy.dust_covars">
+<span class="sig-name descname"><span class="pre">dust_covars</span></span><a class="headerlink" href="#src_dust.sim_funcs.DustHit_NewStrategy.dust_covars" title="Link to this definition">#</a></dt>
+<dd><p>Array of dust covariance matrices (positions only).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src_dust.sim_funcs.DustHit_NewStrategy.plot">
+<span class="sig-name descname"><span class="pre">plot</span></span><a class="headerlink" href="#src_dust.sim_funcs.DustHit_NewStrategy.plot" title="Link to this definition">#</a></dt>
+<dd><p>Flag indicating whether to plot the simulation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src_dust.sim_funcs.DustHit_NewStrategy.ws">
+<span class="sig-name descname"><span class="pre">ws</span></span><a class="headerlink" href="#src_dust.sim_funcs.DustHit_NewStrategy.ws" title="Link to this definition">#</a></dt>
+<dd><p>Weights for the dust particles.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src_dust.sim_funcs.DustHit_NewStrategy.v_unit_sat">
+<span class="sig-name descname"><span class="pre">v_unit_sat</span></span><a class="headerlink" href="#src_dust.sim_funcs.DustHit_NewStrategy.v_unit_sat" title="Link to this definition">#</a></dt>
+<dd><p>Unit vector of the satellite’s velocity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src_dust.sim_funcs.DustHit_NewStrategy.dust_means_proj">
+<span class="sig-name descname"><span class="pre">dust_means_proj</span></span><a class="headerlink" href="#src_dust.sim_funcs.DustHit_NewStrategy.dust_means_proj" title="Link to this definition">#</a></dt>
+<dd><p>Projected dust mean vectors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src_dust.sim_funcs.DustHit_NewStrategy.dust_covars_proj">
+<span class="sig-name descname"><span class="pre">dust_covars_proj</span></span><a class="headerlink" href="#src_dust.sim_funcs.DustHit_NewStrategy.dust_covars_proj" title="Link to this definition">#</a></dt>
+<dd><p>Projected dust covariance matrices.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src_dust.sim_funcs.DustHit_NewStrategy.sat_mean_proj">
+<span class="sig-name descname"><span class="pre">sat_mean_proj</span></span><a class="headerlink" href="#src_dust.sim_funcs.DustHit_NewStrategy.sat_mean_proj" title="Link to this definition">#</a></dt>
+<dd><p>Projected satellite mean.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src_dust.sim_funcs.DustHit_NewStrategy.sat_covar_proj">
+<span class="sig-name descname"><span class="pre">sat_covar_proj</span></span><a class="headerlink" href="#src_dust.sim_funcs.DustHit_NewStrategy.sat_covar_proj" title="Link to this definition">#</a></dt>
+<dd><p>Projected satellite covariance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src_dust.sim_funcs.DustHit_NewStrategy.r_sat">
+<span class="sig-name descname"><span class="pre">r_sat</span></span><a class="headerlink" href="#src_dust.sim_funcs.DustHit_NewStrategy.r_sat" title="Link to this definition">#</a></dt>
+<dd><p>Radius of the satellite.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src_dust.sim_funcs.DustHit_NewStrategy.sat_std">
+<span class="sig-name descname"><span class="pre">sat_std</span></span><a class="headerlink" href="#src_dust.sim_funcs.DustHit_NewStrategy.sat_std" title="Link to this definition">#</a></dt>
+<dd><p>Standard deviation (per component) of the satellite’s projected covariance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src_dust.sim_funcs.DustHit_NewStrategy.get_convdist_func">
+<span class="sig-name descname"><span class="pre">get_convdist_func</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_distributions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_P_val</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_grain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_desired</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_desired</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.sim_funcs.DustHit_NewStrategy.get_convdist_func" title="Link to this definition">#</a></dt>
+<dd><p>Compute the convolution distribution function for the dust-satellite collision model.</p>
+<p>This method projects the dust means and covariances relative to the satellite,
+generates a set of angles spanning [0, 2π), and for each angle computes the crossing
+vectors and corresponding convolution values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_distributions</strong> (<em>int</em>) – The number of minor distributions (components) in the dust model.</p></li>
+<li><p><strong>max_P_val</strong> (<em>float</em>) – The maximum probability value used as a threshold in the crossing search.</p></li>
+<li><p><strong>m_grain</strong> (<em>float</em>) – The mean mass of a dust grain.</p></li>
+<li><p><strong>m_desired</strong> (<em>float</em>) – The desired total mass.</p></li>
+<li><p><strong>p_desired</strong> (<em>float</em>) – The desired probability threshold.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple containing:
+- Array of angles (in radians) used for the search.
+- List of crossing vectors for each theta.
+- List of convolution probability values computed at each crossing.
+- List of mass values computed for each crossing.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src_dust.sim_funcs.DustHit_NewStrategy.get_crossings">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_crossings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dust_means</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dust_covars</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ws</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sat_covar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r_sat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_P_val</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_grain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_desired</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_desired</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.95</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_chi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.sim_funcs.DustHit_NewStrategy.get_crossings" title="Link to this definition">#</a></dt>
+<dd><p>Calculate the crossing points of a vector (rotated by an angle theta) with the Gaussian mixture model (GMM)
+representing dust particles.</p>
+<p>The method rotates the satellite covariance’s Cholesky factor by theta to define a search direction.
+It then uses a recursive bracketing approach (via Brent’s method) to find all values of the scalar chi for which
+the difference between the computed convolution value and <code class="docutils literal notranslate"><span class="pre">max_P_val</span></code> changes sign.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>theta</strong> (<em>float</em>) – The angle by which to rotate the search direction (in radians).</p></li>
+<li><p><strong>dust_means</strong> (<em>numpy.ndarray</em>) – Mean vectors for the dust components (projected).</p></li>
+<li><p><strong>dust_covars</strong> (<em>numpy.ndarray</em>) – Covariance matrices for the dust components (projected).</p></li>
+<li><p><strong>ws</strong> (<em>numpy.ndarray</em>) – Weights for the dust components.</p></li>
+<li><p><strong>sat_covar</strong> (<em>numpy.ndarray</em>) – Satellite covariance matrix (projected).</p></li>
+<li><p><strong>r_sat</strong> (<em>float</em>) – Radius of the satellite (in km).</p></li>
+<li><p><strong>max_P_val</strong> (<em>float</em>) – Maximum probability value for the crossing condition.</p></li>
+<li><p><strong>m_grain</strong> (<em>float</em>) – Grain mass parameter.</p></li>
+<li><p><strong>m_desired</strong> (<em>float</em>) – Desired mass parameter.</p></li>
+<li><p><strong>p_desired</strong> (<em>float</em><em>, </em><em>optional</em>) – Desired probability threshold (default is 0.95).</p></li>
+<li><p><strong>num_chi</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of chi values to use in the search (default is 100).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple containing:
+- A list of vectors representing the crossing points.
+- A list of mass values computed for each crossing.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<ol class="arabic simple" start="3">
+<li><p>_get_conv_gmm_value</p></li>
+</ol>
+<dl class="py function">
+<dt class="sig sig-object py" id="src_dust.sim_funcs._get_conv_gmm_value">
+<span class="sig-prename descclassname"><span class="pre">src_dust.sim_funcs.</span></span><span class="sig-name descname"><span class="pre">_get_conv_gmm_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">means</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">covars</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ws</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r_sat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.sim_funcs._get_conv_gmm_value" title="Link to this definition">#</a></dt>
+<dd><p>Compute the convolution value for a Gaussian Mixture Model (GMM) with a satellite.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>means</strong> (<em>list</em><em> of </em><em>numpy.ndarray</em>) – List of mean vectors for each Gaussian component.</p></li>
+<li><p><strong>covars</strong> (<em>list</em><em> of </em><em>numpy.ndarray</em>) – List of covariance matrices for each Gaussian component.</p></li>
+<li><p><strong>ws</strong> (<em>list</em><em> of </em><em>float</em>) – List of weights for each Gaussian component.</p></li>
+<li><p><strong>r_sat</strong> (<em>float</em>) – Radius of the satellite.</p></li>
+<li><p><strong>pos</strong> (<em>numpy.ndarray</em>) – Position vector of the point at which to evaluate the integral.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The computed convolution value for the GMM with the satellite.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<ul class="simple">
+<li><p>The function iterates over each Gaussian component in the GMM.</p></li>
+<li><p>For each component, it computes the Gaussian integral using the <code class="docutils literal notranslate"><span class="pre">_gaussint</span></code> function.</p></li>
+<li><p>The result is weighted by the component’s weight and summed to get the final value.</p></li>
+</ul>
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="conversions.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Conversions</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.sim_funcs._gaussint"><code class="docutils literal notranslate"><span class="pre">_gaussint()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.sim_funcs.DustHit_NewStrategy"><code class="docutils literal notranslate"><span class="pre">DustHit_NewStrategy</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.sim_funcs.DustHit_NewStrategy.dust_means"><code class="docutils literal notranslate"><span class="pre">DustHit_NewStrategy.dust_means</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.sim_funcs.DustHit_NewStrategy.dust_covars"><code class="docutils literal notranslate"><span class="pre">DustHit_NewStrategy.dust_covars</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.sim_funcs.DustHit_NewStrategy.plot"><code class="docutils literal notranslate"><span class="pre">DustHit_NewStrategy.plot</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.sim_funcs.DustHit_NewStrategy.ws"><code class="docutils literal notranslate"><span class="pre">DustHit_NewStrategy.ws</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.sim_funcs.DustHit_NewStrategy.v_unit_sat"><code class="docutils literal notranslate"><span class="pre">DustHit_NewStrategy.v_unit_sat</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.sim_funcs.DustHit_NewStrategy.dust_means_proj"><code class="docutils literal notranslate"><span class="pre">DustHit_NewStrategy.dust_means_proj</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.sim_funcs.DustHit_NewStrategy.dust_covars_proj"><code class="docutils literal notranslate"><span class="pre">DustHit_NewStrategy.dust_covars_proj</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.sim_funcs.DustHit_NewStrategy.sat_mean_proj"><code class="docutils literal notranslate"><span class="pre">DustHit_NewStrategy.sat_mean_proj</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.sim_funcs.DustHit_NewStrategy.sat_covar_proj"><code class="docutils literal notranslate"><span class="pre">DustHit_NewStrategy.sat_covar_proj</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.sim_funcs.DustHit_NewStrategy.r_sat"><code class="docutils literal notranslate"><span class="pre">DustHit_NewStrategy.r_sat</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.sim_funcs.DustHit_NewStrategy.sat_std"><code class="docutils literal notranslate"><span class="pre">DustHit_NewStrategy.sat_std</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.sim_funcs.DustHit_NewStrategy.get_convdist_func"><code class="docutils literal notranslate"><span class="pre">DustHit_NewStrategy.get_convdist_func()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.sim_funcs.DustHit_NewStrategy.get_crossings"><code class="docutils literal notranslate"><span class="pre">DustHit_NewStrategy.get_crossings()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.sim_funcs._get_conv_gmm_value"><code class="docutils literal notranslate"><span class="pre">_get_conv_gmm_value()</span></code></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Truman DeWalch, Riley Fitzgerald, Isaac Payne
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Truman DeWalch, Riley Fitzgerald, Isaac Payne.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,867 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Perturbations &#8212; NASA Dust  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'perturbs';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Conversions" href="conversions.html" />
+    <link rel="prev" title="Propagators" href="propagators.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">NASA Dust  documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="homepage.html">NASA Dust and Satpy_tools Documentation</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="satpy_tools.html">Satpy_tools</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="orbitalobjects.html">Orbital Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="propagators.html">Propagators</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Perturbations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conversions.html">Conversions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="sim_funcs.html">Sim Funcs</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/perturbs.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Perturbations</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.perturbs.Perturbations"><code class="docutils literal notranslate"><span class="pre">Perturbations</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.perturbs.Perturbations.get_SRP"><code class="docutils literal notranslate"><span class="pre">Perturbations.get_SRP()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.perturbs.Perturbations.get_coulomb_drag"><code class="docutils literal notranslate"><span class="pre">Perturbations.get_coulomb_drag()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.perturbs.Perturbations.get_drag"><code class="docutils literal notranslate"><span class="pre">Perturbations.get_drag()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.perturbs.Perturbations.get_earth_rad"><code class="docutils literal notranslate"><span class="pre">Perturbations.get_earth_rad()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.perturbs.Perturbations.get_jupiter_grav"><code class="docutils literal notranslate"><span class="pre">Perturbations.get_jupiter_grav()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.perturbs.Perturbations.get_lorentz"><code class="docutils literal notranslate"><span class="pre">Perturbations.get_lorentz()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.perturbs.Perturbations.get_moon_grav"><code class="docutils literal notranslate"><span class="pre">Perturbations.get_moon_grav()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.perturbs.Perturbations.get_relativity"><code class="docutils literal notranslate"><span class="pre">Perturbations.get_relativity()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.perturbs.Perturbations.get_sun_grav"><code class="docutils literal notranslate"><span class="pre">Perturbations.get_sun_grav()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.perturbs.Perturbations.get_tides"><code class="docutils literal notranslate"><span class="pre">Perturbations.get_tides()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.perturbs.Perturbations.get_venus_grav"><code class="docutils literal notranslate"><span class="pre">Perturbations.get_venus_grav()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.perturbs.Perturbations.sphericals"><code class="docutils literal notranslate"><span class="pre">Perturbations.sphericals()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.perturbs.Perturbations.sphericals_python"><code class="docutils literal notranslate"><span class="pre">Perturbations.sphericals_python()</span></code></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="perturbations">
+<h1>Perturbations<a class="headerlink" href="#perturbations" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.perturbs.Perturbations">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src_dust.satpy_tools.src.perturbs.</span></span><span class="sig-name descname"><span class="pre">Perturbations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kepler_orbit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">7</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">no_cache</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">perturbs_included</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['sphericals',</span> <span class="pre">'drag',</span> <span class="pre">'earthrad',</span> <span class="pre">'moon',</span> <span class="pre">'srp',</span> <span class="pre">'sun',</span> <span class="pre">'tides',</span> <span class="pre">'lorentz']</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.satpy_tools.src.perturbs.Perturbations" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.perturbs.Perturbations.get_SRP">
+<span class="sig-name descname"><span class="pre">get_SRP</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_inp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Am_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qm_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CD</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CR</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2459714.2916666665</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r_obj_m</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.satpy_tools.src.perturbs.Perturbations.get_SRP" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the Solar Radiation Pressure (SRP) acceleration vector based on the state vector and various ratios and constants.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state_inp</strong> (<em>numpy.ndarray</em>) – The state vector representing the satellite’s position and velocity.</p></li>
+<li><p><strong>Am_ratio</strong> (<em>float</em>) – The area-to-mass ratio of the satellite.</p></li>
+<li><p><strong>qm_ratio</strong> (<em>float</em><em>, </em><em>optional</em>) – The mass-to-charge ratio of the satellite. Defaults to 0.</p></li>
+<li><p><strong>CD</strong> (<em>float</em><em>, </em><em>optional</em>) – The drag coefficient of the satellite. Defaults to 2.2.</p></li>
+<li><p><strong>CR</strong> (<em>float</em><em>, </em><em>optional</em>) – The radiation coefficient of the satellite. Defaults to 1.25.</p></li>
+<li><p><strong>jd</strong> (<em>float</em><em>, </em><em>optional</em>) – The Julian date of the simulation. Defaults to the current date.</p></li>
+<li><p><strong>r_obj_m</strong> (<em>float</em><em>, </em><em>optional</em>) – The radius of the satellite in meters. Defaults to 20e-6.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The SRP acceleration vector.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.perturbs.Perturbations.get_coulomb_drag">
+<span class="sig-name descname"><span class="pre">get_coulomb_drag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_inp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Am_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qm_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CD</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CR</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2459714.2916666665</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r_obj_m</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.satpy_tools.src.perturbs.Perturbations.get_coulomb_drag" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the acceleration vector due to Coulomb drag on a dust grain due to Coulomb collisions with the surrounding plasma.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state_inp</strong> (<em>numpy array</em>) – The state vector containing position and velocity components of the dust grain.</p></li>
+<li><p><strong>Am_ratio</strong> (<em>float</em><em>, </em><em>optional</em>) – The area-to-mass ratio of the dust grain. Defaults to 0.</p></li>
+<li><p><strong>qm_ratio</strong> (<em>float</em><em>, </em><em>optional</em>) – The charge-to-mass ratio of the dust grain. Defaults to 0.</p></li>
+<li><p><strong>CD</strong> (<em>float</em><em>, </em><em>optional</em>) – The drag coefficient. Defaults to 2.2.</p></li>
+<li><p><strong>CR</strong> (<em>float</em><em>, </em><em>optional</em>) – The radiation pressure coefficient. Defaults to 1.25.</p></li>
+<li><p><strong>jd</strong> (<em>float</em><em>, </em><em>optional</em>) – The Julian date. Defaults to NOW_JD.</p></li>
+<li><p><strong>r_obj_m</strong> (<em>float</em><em>, </em><em>optional</em>) – The radius of the dust grain in meters. Defaults to 20e-6.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The acceleration vector due to Coulomb drag.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.perturbs.Perturbations.get_drag">
+<span class="sig-name descname"><span class="pre">get_drag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_inp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Am_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qm_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CD</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CR</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2459714.2916666665</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r_obj_m</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.satpy_tools.src.perturbs.Perturbations.get_drag" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the drag acceleration vector between the satellite and the Earth’s atmosphere based on the state vector and various ratios and constants.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state_inp</strong> (<em>numpy.ndarray</em>) – The state vector representing the satellite’s position and velocity.</p></li>
+<li><p><strong>Am_ratio</strong> (<em>float</em>) – The ratio of the satellite’s mass to the mass of the Earth.</p></li>
+<li><p><strong>qm_ratio</strong> (<em>float</em><em>, </em><em>optional</em>) – The ratio of the satellite’s mass to the mass of the Moon. Defaults to 0.</p></li>
+<li><p><strong>CD</strong> (<em>float</em><em>, </em><em>optional</em>) – The drag coefficient. Defaults to 2.2.</p></li>
+<li><p><strong>CR</strong> (<em>float</em><em>, </em><em>optional</em>) – The reflection coefficient. Defaults to 1.25.</p></li>
+<li><p><strong>jd</strong> (<em>float</em><em>, </em><em>optional</em>) – The Julian date. Defaults to the current Julian date.</p></li>
+<li><p><strong>r_obj_m</strong> (<em>float</em><em>, </em><em>optional</em>) – The radius of the object in meters. Defaults to 20e-6.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The drag acceleration vector.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+<dl>
+<dt>Description:</dt><dd><p>This function calculates the drag acceleration vector between the satellite and the Earth’s atmosphere based on the state vector and various ratios and constants.
+It uses the satellite’s position and velocity to calculate the drag acceleration.</p>
+<dl class="simple">
+<dt>The drag acceleration is calculated using the formula:</dt><dd><p>a_drag = -0.5 * CD * Am_ratio * rho * v_rel^2 * v_rel_vec / v_rel</p>
+</dd>
+<dt>where:</dt><dd><ul class="simple">
+<li><p>CD is the drag coefficient</p></li>
+<li><p>Am_ratio is the ratio of the satellite’s mass to the mass of the Earth</p></li>
+<li><p>rho is the density of the atmosphere at the satellite’s position</p></li>
+<li><p>v_rel is the relative velocity between the satellite and the atmosphere</p></li>
+<li><p>v_rel_vec is the vector of the relative velocity between the satellite and the atmosphere</p></li>
+</ul>
+</dd>
+</dl>
+<p>The function returns the drag acceleration vector.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.perturbs.Perturbations.get_earth_rad">
+<span class="sig-name descname"><span class="pre">get_earth_rad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_inp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Am_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qm_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CD</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CR</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2459714.2916666665</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r_obj_m</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.satpy_tools.src.perturbs.Perturbations.get_earth_rad" title="Link to this definition">#</a></dt>
+<dd><p>Calculate the Earth radiation pressure effect on a satellite.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state_inp</strong> (<em>numpy.ndarray</em>) – The state vector of the satellite in ECI coordinates.</p></li>
+<li><p><strong>Am_ratio</strong> (<em>float</em>) – The area-to-mass ratio of the satellite.</p></li>
+<li><p><strong>qm_ratio</strong> (<em>float</em><em>, </em><em>optional</em>) – The charge-to-mass ratio of the satellite. Defaults to 0.</p></li>
+<li><p><strong>CD</strong> (<em>float</em><em>, </em><em>optional</em>) – The drag coefficient of the satellite. Defaults to 2.2.</p></li>
+<li><p><strong>CR</strong> (<em>float</em><em>, </em><em>optional</em>) – The reflection law effectiveness coefficient. Defaults to 1.25.</p></li>
+<li><p><strong>jd</strong> (<em>float</em><em>, </em><em>optional</em>) – The Julian date. Defaults to NOW_JD.</p></li>
+<li><p><strong>r_obj_m</strong> (<em>float</em><em>, </em><em>optional</em>) – The radius of the satellite in meters. Defaults to 20e-6.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The acceleration due to Earth radiation pressure in ECI coordinates.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<ul class="simple">
+<li><p>The Earth radiation pressure is calculated using the method described in “EARTH RADIATION PRESSURE EFFECTS ON SATELLITES” by Philip Knoche.</p></li>
+<li><p>The function assumes that the satellite is a perfect reflector and emits equally in all directions.</p></li>
+<li><p>The function uses the solar position and the satellite’s position in ECI coordinates to calculate the solar zenith angle and the solar irradiance.</p></li>
+<li><p>The function uses the area-to-mass ratio, charge-to-mass ratio, drag coefficient, reflection law effectiveness coefficient, and the satellite’s position in ECI coordinates to calculate the Earth radiation pressure acceleration.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.perturbs.Perturbations.get_jupiter_grav">
+<span class="sig-name descname"><span class="pre">get_jupiter_grav</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_inp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Am_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qm_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CD</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CR</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2459714.2916666665</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r_obj_m</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.satpy_tools.src.perturbs.Perturbations.get_jupiter_grav" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the gravitational acceleration vector of Jupiter on a satellite.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state_inp</strong> (<em>numpy.ndarray</em>) – The state vector of the satellite.</p></li>
+<li><p><strong>Am_ratio</strong> (<em>float</em><em>, </em><em>optional</em>) – The area-to-mass ratio of the satellite. Defaults to 0.</p></li>
+<li><p><strong>qm_ratio</strong> (<em>float</em><em>, </em><em>optional</em>) – The mass-to-charge ratio of the satellite. Defaults to 0.</p></li>
+<li><p><strong>CD</strong> (<em>float</em><em>, </em><em>optional</em>) – The drag coefficient. Defaults to 2.2.</p></li>
+<li><p><strong>CR</strong> (<em>float</em><em>, </em><em>optional</em>) – The reflectivity coefficient. Defaults to 1.25.</p></li>
+<li><p><strong>jd</strong> (<em>float</em><em>, </em><em>optional</em>) – The Julian date. Defaults to the current date.</p></li>
+<li><p><strong>r_obj_m</strong> (<em>float</em><em>, </em><em>optional</em>) – The radius of the satellite. Defaults to 20e-6.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The gravitational acceleration vector of Jupiter on the satellite.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.perturbs.Perturbations.get_lorentz">
+<span class="sig-name descname"><span class="pre">get_lorentz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_inp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Am_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qm_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CD</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CR</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2459714.2916666665</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r_obj_m</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.satpy_tools.src.perturbs.Perturbations.get_lorentz" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the Lorentz force acceleration vector based on the state vector and various ratios and constants.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state_inp</strong> (<em>numpy.ndarray</em>) – The state vector containing the position and velocity of the object.</p></li>
+<li><p><strong>Am_ratio</strong> (<em>float</em><em>, </em><em>optional</em>) – The ratio of the area of the object to its mass. Defaults to 0.</p></li>
+<li><p><strong>qm_ratio</strong> (<em>float</em><em>, </em><em>optional</em>) – The ratio of the charge of the object to its mass. Defaults to 0.</p></li>
+<li><p><strong>CD</strong> (<em>float</em><em>, </em><em>optional</em>) – The drag coefficient. Defaults to 2.2.</p></li>
+<li><p><strong>CR</strong> (<em>float</em><em>, </em><em>optional</em>) – The reflection coefficient. Defaults to 1.25.</p></li>
+<li><p><strong>jd</strong> (<em>float</em><em>, </em><em>optional</em>) – The Julian date. Defaults to NOW_JD.</p></li>
+<li><p><strong>r_obj_m</strong> (<em>float</em><em>, </em><em>optional</em>) – The radius of the object in meters. Defaults to 20e-6.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The Lorentz force acceleration vector.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>None</strong> – </p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<ul class="simple">
+<li><p>The function assumes that the state vector contains the position and velocity of the object in the following order: [x, y, z, vx, vy, vz].</p></li>
+<li><p>The function assumes that the object is in Earth-centered inertial (ECI) coordinates.</p></li>
+<li><p>The function calculates the Lorentz force acceleration vector based on the state vector and various ratios and constants.</p></li>
+<li><p>The function returns the Lorentz force acceleration vector.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.perturbs.Perturbations.get_moon_grav">
+<span class="sig-name descname"><span class="pre">get_moon_grav</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_inp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Am_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qm_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CD</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CR</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2459714.2916666665</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r_obj_m</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.satpy_tools.src.perturbs.Perturbations.get_moon_grav" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the Moon’s gravitational acceleration vector acting on a satellite based on the state vector and various ratios and constants.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state_inp</strong> (<em>numpy.ndarray</em>) – The state vector representing the position and velocity of the satellite.</p></li>
+<li><p><strong>Am_ratio</strong> (<em>float</em><em>, </em><em>optional</em>) – The ratio of the area of the satellite to its mass. Defaults to 0.</p></li>
+<li><p><strong>qm_ratio</strong> (<em>float</em><em>, </em><em>optional</em>) – The ratio of the charge of the satellite to its mass. Defaults to 0.</p></li>
+<li><p><strong>CD</strong> (<em>float</em><em>, </em><em>optional</em>) – The drag coefficient. Defaults to 2.2.</p></li>
+<li><p><strong>CR</strong> (<em>float</em><em>, </em><em>optional</em>) – The reflection coefficient. Defaults to 1.25.</p></li>
+<li><p><strong>jd</strong> (<em>float</em><em>, </em><em>optional</em>) – The Julian date. Defaults to NOW_JD.</p></li>
+<li><p><strong>r_obj_m</strong> (<em>float</em><em>, </em><em>optional</em>) – The radius of the satellite in meters. Defaults to 20e-6.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The Moon’s gravitational acceleration vector acting on the satellite.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.perturbs.Perturbations.get_relativity">
+<span class="sig-name descname"><span class="pre">get_relativity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_inp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Am_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qm_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CD</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CR</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2459714.2916666665</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r_obj_m</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.satpy_tools.src.perturbs.Perturbations.get_relativity" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the acceleration vector based on the state vector and various ratios and constants.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state_inp</strong> (<em>numpy array</em>) – The state vector containing position and velocity components.</p></li>
+<li><p><strong>Am_ratio</strong> (<em>float</em>) – The area-to-mass ratio.</p></li>
+<li><p><strong>qm_ratio</strong> (<em>float</em>) – The charge-to-mass ratio.</p></li>
+<li><p><strong>CD</strong> (<em>float</em>) – Drag coefficient.</p></li>
+<li><p><strong>CR</strong> (<em>float</em>) – Reflectivity coefficient.</p></li>
+<li><p><strong>jd</strong> (<em>float</em>) – Julian Date.</p></li>
+<li><p><strong>r_obj_m</strong> (<em>float</em>) – Radius of the object in meters.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The acceleration vector calculated based on the input parameters.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.perturbs.Perturbations.get_sun_grav">
+<span class="sig-name descname"><span class="pre">get_sun_grav</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_inp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Am_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qm_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CD</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CR</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2459714.2916666665</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r_obj_m</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.satpy_tools.src.perturbs.Perturbations.get_sun_grav" title="Link to this definition">#</a></dt>
+<dd><p>Calculate the gravitational acceleration vector of the sun on a satellite.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state_inp</strong> (<em>numpy.ndarray</em>) – The state vector of the satellite.</p></li>
+<li><p><strong>Am_ratio</strong> (<em>float</em><em>, </em><em>optional</em>) – The area-to-mass ratio of the satellite. Defaults to 0.</p></li>
+<li><p><strong>qm_ratio</strong> (<em>float</em><em>, </em><em>optional</em>) – The mass-to-charge ratio of the satellite. Defaults to 0.</p></li>
+<li><p><strong>CD</strong> (<em>float</em><em>, </em><em>optional</em>) – The drag coefficient. Defaults to 2.2.</p></li>
+<li><p><strong>CR</strong> (<em>float</em><em>, </em><em>optional</em>) – The reflectivity coefficient. Defaults to 1.25.</p></li>
+<li><p><strong>jd</strong> (<em>float</em><em>, </em><em>optional</em>) – The Julian date. Defaults to the current date.</p></li>
+<li><p><strong>r_obj_m</strong> (<em>float</em><em>, </em><em>optional</em>) – The radius of the satellite. Defaults to 20e-6.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The gravitational acceleration vector of the sun on the satellite.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.perturbs.Perturbations.get_tides">
+<span class="sig-name descname"><span class="pre">get_tides</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_inp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Am_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qm_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CD</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CR</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2459714.2916666665</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r_obj_m</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.satpy_tools.src.perturbs.Perturbations.get_tides" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the tidal acceleration vector based on the state vector and various ratios and constants.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state_inp</strong> (<em>numpy.ndarray</em>) – The state vector representing the satellite’s position and velocity.</p></li>
+<li><p><strong>Am_ratio</strong> (<em>float</em><em>, </em><em>optional</em>) – The ratio of the satellite’s mass to the mass of the Earth. Defaults to 0.</p></li>
+<li><p><strong>qm_ratio</strong> (<em>float</em><em>, </em><em>optional</em>) – The ratio of the satellite’s mass to the mass of the Moon. Defaults to 0.</p></li>
+<li><p><strong>CD</strong> (<em>float</em><em>, </em><em>optional</em>) – The drag coefficient. Defaults to 2.2.</p></li>
+<li><p><strong>CR</strong> (<em>float</em><em>, </em><em>optional</em>) – The reflection coefficient. Defaults to 1.25.</p></li>
+<li><p><strong>jd</strong> (<em>float</em><em>, </em><em>optional</em>) – The Julian date. Defaults to the current Julian date.</p></li>
+<li><p><strong>r_obj_m</strong> (<em>float</em><em>, </em><em>optional</em>) – The radius of the object in meters. Defaults to 20e-6.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The tidal acceleration vector.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+<dl>
+<dt>Description:</dt><dd><p>This function calculates the tidal acceleration vector based on the state vector and various ratios and constants.
+It uses the positions of the Sun and the Moon to calculate the tidal acceleration.</p>
+<dl class="simple">
+<dt>The tidal acceleration is calculated using the formula:</dt><dd><p>a_tides = (a_sun + a_moon) * r / r_norm</p>
+</dd>
+<dt>where:</dt><dd><ul class="simple">
+<li><p>a_sun is the tidal acceleration due to the Sun</p></li>
+<li><p>a_moon is the tidal acceleration due to the Moon</p></li>
+<li><p>r is the vector from the satellite to the center of the Earth</p></li>
+<li><p>r_norm is the norm of the vector r</p></li>
+</ul>
+</dd>
+<dt>The values of a_sun and a_moon are calculated using the formula:</dt><dd><p>a_sun = -3/2 * kap * MU_SUN * RE5 * (3 * cosgam2 - 1) / (s_norm**3 * rnorm4)
+a_moon = -3/2 * kap * MU_MOON * RE5 * (3 * cosgam2 - 1) / (m_norm**3 * rnorm4)</p>
+</dd>
+<dt>where:</dt><dd><ul class="simple">
+<li><p>kap is a constant value of 0.3</p></li>
+<li><p>MU_SUN is the gravitational constant of the Sun</p></li>
+<li><p>MU_MOON is the gravitational constant of the Moon</p></li>
+<li><p>RE is the Earth’s radius</p></li>
+<li><p>s_norm is the norm of the vector from the satellite to the Sun</p></li>
+<li><p>m_norm is the norm of the vector from the satellite to the Moon</p></li>
+<li><p>rnorm4 is the fourth power of the norm of the vector r</p></li>
+</ul>
+</dd>
+</dl>
+<p>The function returns the tidal acceleration vector.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.perturbs.Perturbations.get_venus_grav">
+<span class="sig-name descname"><span class="pre">get_venus_grav</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_inp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Am_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qm_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CD</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CR</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2459714.2916666665</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r_obj_m</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.satpy_tools.src.perturbs.Perturbations.get_venus_grav" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the gravitational acceleration vector between the satellite and Venus based on the state vector and various ratios and constants.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state_inp</strong> (<em>numpy.ndarray</em>) – The state vector representing the satellite’s position.</p></li>
+<li><p><strong>Am_ratio</strong> (<em>float</em><em>, </em><em>optional</em>) – The area-to-mass ratio of the satellite. Defaults to 0.</p></li>
+<li><p><strong>qm_ratio</strong> (<em>float</em><em>, </em><em>optional</em>) – The charge-to-mass ratio of the satellite. Defaults to 0.</p></li>
+<li><p><strong>CD</strong> (<em>float</em><em>, </em><em>optional</em>) – The drag coefficient of the satellite. Defaults to 2.2.</p></li>
+<li><p><strong>CR</strong> (<em>float</em><em>, </em><em>optional</em>) – The reflectivity coefficient of the satellite. Defaults to 1.25.</p></li>
+<li><p><strong>jd</strong> (<em>float</em><em>, </em><em>optional</em>) – The Julian date. Defaults to NOW_JD.</p></li>
+<li><p><strong>r_obj_m</strong> (<em>float</em><em>, </em><em>optional</em>) – The radius of the object in meters. Defaults to 20e-6.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The gravitational acceleration vector between the satellite and Venus.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.perturbs.Perturbations.sphericals">
+<span class="sig-name descname"><span class="pre">sphericals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_inp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Am_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qm_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CD</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CR</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2459714.2916666665</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r_obj_m</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.satpy_tools.src.perturbs.Perturbations.sphericals" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the gravitational acceleration vector of a satellite due to the gravitational field of the Earth.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state_inp</strong> (<em>numpy.ndarray</em>) – The state vector of the satellite.</p></li>
+<li><p><strong>Am_ratio</strong> (<em>float</em><em>, </em><em>optional</em>) – The area-to-mass ratio of the satellite. Defaults to 0.</p></li>
+<li><p><strong>qm_ratio</strong> (<em>float</em><em>, </em><em>optional</em>) – The charge-to-mass ratio of the satellite. Defaults to 0.</p></li>
+<li><p><strong>CD</strong> (<em>float</em><em>, </em><em>optional</em>) – The drag coefficient of the satellite. Defaults to 2.2.</p></li>
+<li><p><strong>CR</strong> (<em>float</em><em>, </em><em>optional</em>) – The reflectivity coefficient of the satellite. Defaults to 1.25.</p></li>
+<li><p><strong>jd</strong> (<em>float</em><em>, </em><em>optional</em>) – The Julian date. Defaults to NOW_JD.</p></li>
+<li><p><strong>r_obj_m</strong> (<em>float</em><em>, </em><em>optional</em>) – The radius of the object in meters. Defaults to 20e-6.</p></li>
+<li><p><strong>order</strong> (<em>int</em><em>, </em><em>optional</em>) – The order of the spherical harmonics expansion. Defaults to 7.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The gravitational acceleration vector of the satellite.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the shape of the input state vector is not (6,).</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<ul class="simple">
+<li><p>The function uses the spherical harmonics expansion of the gravitational potential to calculate the gravitational acceleration vector.</p></li>
+<li><p>The order of the spherical harmonics expansion is controlled by the <cite>order</cite> parameter.</p></li>
+<li><p>The function assumes that the input state vector is in ECI coordinates.</p></li>
+<li><p>The function calculates the gravitational acceleration vector in ECI coordinates.</p></li>
+<li><p>The function assumes that the input state vector is in meters.</p></li>
+<li><p>The function assumes that the input Julian date is in UTC.</p></li>
+<li><p>The function assumes that the input radius of the object is in meters.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.perturbs.Perturbations.sphericals_python">
+<span class="sig-name descname"><span class="pre">sphericals_python</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_inp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Am_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qm_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CD</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CR</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2459714.2916666665</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r_obj_m</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.satpy_tools.src.perturbs.Perturbations.sphericals_python" title="Link to this definition">#</a></dt>
+<dd><p>Calculates the gravitational acceleration vector of a satellite due to the gravitational field of the Earth.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state_inp</strong> (<em>numpy.ndarray</em>) – The state vector of the satellite.</p></li>
+<li><p><strong>Am_ratio</strong> (<em>float</em><em>, </em><em>optional</em>) – The area-to-mass ratio of the satellite. Defaults to 0.</p></li>
+<li><p><strong>qm_ratio</strong> (<em>float</em><em>, </em><em>optional</em>) – The charge-to-mass ratio of the satellite. Defaults to 0.</p></li>
+<li><p><strong>CD</strong> (<em>float</em><em>, </em><em>optional</em>) – The drag coefficient of the satellite. Defaults to 2.2.</p></li>
+<li><p><strong>CR</strong> (<em>float</em><em>, </em><em>optional</em>) – The reflectivity coefficient of the satellite. Defaults to 1.25.</p></li>
+<li><p><strong>jd</strong> (<em>float</em><em>, </em><em>optional</em>) – The Julian date. Defaults to NOW_JD.</p></li>
+<li><p><strong>r_obj_m</strong> (<em>float</em><em>, </em><em>optional</em>) – The radius of the object in meters. Defaults to 20e-6.</p></li>
+<li><p><strong>order</strong> (<em>int</em><em>, </em><em>optional</em>) – The order of the spherical harmonics expansion. Defaults to 7.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The gravitational acceleration vector of the satellite.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the shape of the input state vector is not (6,).</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<ul class="simple">
+<li><p>The function uses the spherical harmonics expansion of the gravitational potential to calculate the gravitational acceleration vector.</p></li>
+<li><p>The order of the spherical harmonics expansion is controlled by the <cite>order</cite> parameter.</p></li>
+<li><p>The function assumes that the input state vector is in ECI coordinates.</p></li>
+<li><p>The function calculates the gravitational acceleration vector in ECI coordinates.</p></li>
+<li><p>The function assumes that the input state vector is in meters.</p></li>
+<li><p>The function assumes that the input Julian date is in UTC.</p></li>
+<li><p>The function assumes that the input radius of the object is in meters.</p></li>
+</ul>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="propagators.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Propagators</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="conversions.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Conversions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.perturbs.Perturbations"><code class="docutils literal notranslate"><span class="pre">Perturbations</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.perturbs.Perturbations.get_SRP"><code class="docutils literal notranslate"><span class="pre">Perturbations.get_SRP()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.perturbs.Perturbations.get_coulomb_drag"><code class="docutils literal notranslate"><span class="pre">Perturbations.get_coulomb_drag()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.perturbs.Perturbations.get_drag"><code class="docutils literal notranslate"><span class="pre">Perturbations.get_drag()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.perturbs.Perturbations.get_earth_rad"><code class="docutils literal notranslate"><span class="pre">Perturbations.get_earth_rad()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.perturbs.Perturbations.get_jupiter_grav"><code class="docutils literal notranslate"><span class="pre">Perturbations.get_jupiter_grav()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.perturbs.Perturbations.get_lorentz"><code class="docutils literal notranslate"><span class="pre">Perturbations.get_lorentz()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.perturbs.Perturbations.get_moon_grav"><code class="docutils literal notranslate"><span class="pre">Perturbations.get_moon_grav()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.perturbs.Perturbations.get_relativity"><code class="docutils literal notranslate"><span class="pre">Perturbations.get_relativity()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.perturbs.Perturbations.get_sun_grav"><code class="docutils literal notranslate"><span class="pre">Perturbations.get_sun_grav()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.perturbs.Perturbations.get_tides"><code class="docutils literal notranslate"><span class="pre">Perturbations.get_tides()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.perturbs.Perturbations.get_venus_grav"><code class="docutils literal notranslate"><span class="pre">Perturbations.get_venus_grav()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.perturbs.Perturbations.sphericals"><code class="docutils literal notranslate"><span class="pre">Perturbations.sphericals()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.perturbs.Perturbations.sphericals_python"><code class="docutils literal notranslate"><span class="pre">Perturbations.sphericals_python()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Truman DeWalch, Riley Fitzgerald, Isaac Payne
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Truman DeWalch, Riley Fitzgerald, Isaac Payne.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,605 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>NASA Dust and Satpy_tools Documentation &#8212; NASA Dust  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'homepage';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Satpy_tools" href="satpy_tools.html" />
+    <link rel="prev" title="NASA Dust documentation" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">NASA Dust  documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">NASA Dust and Satpy_tools Documentation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="satpy_tools.html">Satpy_tools</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="orbitalobjects.html">Orbital Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="propagators.html">Propagators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="perturbs.html">Perturbations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conversions.html">Conversions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="sim_funcs.html">Sim Funcs</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/homepage.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>NASA Dust and Satpy_tools Documentation</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-tutorial">Installation Tutorial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#codebase-overview">Codebase Overview</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nasa-dust">NASA Dust</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#satpy-tools">Satpy_tools</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="nasa-dust-and-satpy-tools-documentation">
+<h1>NASA Dust and Satpy_tools Documentation<a class="headerlink" href="#nasa-dust-and-satpy-tools-documentation" title="Link to this heading">#</a></h1>
+<nav class="contents local" id="table-of-contents">
+<p class="topic-title">Table of Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#introduction" id="id1">Introduction</a></p></li>
+<li><p><a class="reference internal" href="#installation-tutorial" id="id2">Installation Tutorial</a></p></li>
+<li><p><a class="reference internal" href="#codebase-overview" id="id3">Codebase Overview</a></p>
+<ul>
+<li><p><a class="reference internal" href="#nasa-dust" id="id4">NASA Dust</a></p></li>
+<li><p><a class="reference internal" href="#satpy-tools" id="id5">Satpy_tools</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#conclusion" id="id6">Conclusion</a></p></li>
+</ul>
+</nav>
+<section id="introduction">
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Introduction</a><a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>This documentation covers both <strong>NASA Dust</strong>—a simulation framework—and <strong>Satpy_tools</strong>—a satellite propagation toolkit. The instructions below detail installation, configuration, and an overview of the codebases.</p>
+</section>
+<section id="installation-tutorial">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Installation Tutorial</a><a class="headerlink" href="#installation-tutorial" title="Link to this heading">#</a></h2>
+<p><strong>Note:</strong> The following tutorial was written using Visual Studio Code and Anaconda. The steps should be similar for other IDEs and package/environment managers, though they have not been tested. If possible, also use Windows Subsystem for Linux (WSL) with Ubuntu (the default distro for WSL). (On Windows 10, WSL may have issues with Matplotlib.)</p>
+<p>### Required Software</p>
+<p>Install the following software if not already available:</p>
+<ul class="simple">
+<li><p><strong>Git:</strong> <a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">install git</a></p></li>
+<li><p><strong>Visual Studio Code:</strong> <a class="reference external" href="https://code.visualstudio.com/download">install VS Code</a></p></li>
+<li><p><strong>Anaconda:</strong> <a class="reference external" href="https://docs.anaconda.com/anaconda/install/linux/">install Anaconda</a></p></li>
+</ul>
+<p>### VS Code Extensions</p>
+<p>You will need these VS Code extensions:</p>
+<ul class="simple">
+<li><p><strong>Python:</strong> <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">install python</a></p></li>
+<li><p><strong>WSL:</strong> <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl">install WSL</a></p></li>
+</ul>
+<p>Additional recommended extensions:</p>
+<ul class="simple">
+<li><p><strong>Excel Viewer:</strong> <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=GrapeCity.gc-excelviewer">install Excel Viewer</a></p></li>
+<li><p><strong>Rainbow CSV:</strong> <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv">install Rainbow CSV</a></p></li>
+<li><p><strong>Catppuccin Theme:</strong> <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc">install Catppuccino Theme</a></p></li>
+<li><p><strong>Catppuccin Icons:</strong> <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=Catppuccin.catppuccin-vsc-icons">install Catppuccino Icons</a></p></li>
+<li><p><strong>isort:</strong> <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-python.isort">install isort</a></p></li>
+</ul>
+<p>### SSH Key Setup</p>
+<ol class="arabic simple">
+<li><p><strong>Generate an SSH Key:</strong>
+Follow these instructions:
+<a class="reference external" href="https://docs.gitlab.com/ee/user/ssh.html#generate-an-ssh-key-pair">Generate an SSH key pair</a></p></li>
+<li><p><strong>Add the SSH Key to GitLab:</strong>
+Follow this tutorial:
+<a class="reference external" href="https://docs.gitlab.com/ee/user/ssh.html#add-an-ssh-key-to-your-gitlab-account">Add an SSH key to your GitLab account</a></p></li>
+</ol>
+<p>### Cloning the Repository</p>
+<p>Clone the repository along with its submodule using the recursive flag:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>git@code.vt.edu:truman99/nasa_dust.git<span class="w"> </span>--recurse-submodules
+</pre></div>
+</div>
+<p>### Opening in VS Code</p>
+<p>Open the repository in VS Code. After onboarding, you should see an interface similar to the following:</p>
+<img alt="VS Code Interface" class="align-center" src="_images/vscodeopen.png" />
+<p><em>Hint:</em> Click the folder open button, navigate to where you cloned the repository, single-click the folder (do not open it), then select “Open” from the popup (bottom right).</p>
+<p>### Git Configuration</p>
+<p>In a terminal, navigate to the repository and configure Git (skip the configuration commands if already done):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>path/to/repo/nasa_dust
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Your Name&quot;</span>
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;your.email@email.com&quot;</span>
+</pre></div>
+</div>
+<p>### Environment Setup and Package Installation</p>
+<p>Create a conda environment and install the required packages:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>nasa_dust<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.13
+conda<span class="w"> </span>activate<span class="w"> </span>nasa_dust<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--no-cache-dir<span class="w"> </span>-r<span class="w"> </span>src_dust/satpy_tools/requirements.txt
+</pre></div>
+</div>
+<p>### Updating the Repository</p>
+<p>To update both the main repository and the submodule, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>pull<span class="w"> </span>--recurse-submodules
+git<span class="w"> </span>submodule<span class="w"> </span>update<span class="w"> </span>--remote
+</pre></div>
+</div>
+</section>
+<section id="codebase-overview">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Codebase Overview</a><a class="headerlink" href="#codebase-overview" title="Link to this heading">#</a></h2>
+<p>This section provides an overview of the two codebases: <strong>NASA Dust</strong> and <strong>Satpy_tools</strong>.</p>
+<section id="nasa-dust">
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">NASA Dust</a><a class="headerlink" href="#nasa-dust" title="Link to this heading">#</a></h3>
+<p>The <strong>NASA Dust</strong> project is centered around the simulation framework. Key details include:</p>
+<ul class="simple">
+<li><p><strong>Main Code:</strong>
+The core functionality is implemented in <code class="docutils literal notranslate"><span class="pre">src_dust/sim_funcs.py</span></code>, which contains all the main classes that run the simulation.</p></li>
+<li><p><strong>Submodule:</strong>
+The project includes the <strong>satpy_tools</strong> submodule that handles satellite propagation (see the section below).</p></li>
+</ul>
+<p>### Notes on Units (NASA Dust)</p>
+<ul class="simple">
+<li><p><strong>Standard Units:</strong>
+All inputs and outputs are expected to be in kilometers (km), kilograms (kg), seconds (s), and radians (rad) unless otherwise specified (e.g., in variable names or function arguments).</p></li>
+<li><p><strong>Exceptions:</strong>
+- <strong>Area-to-Mass Ratio:</strong> m²/kg
+- <strong>Object Radius (for propagator):</strong> meters (m)
+- <strong>Julian Date (jd):</strong> days
+- <strong>Some constants (e.g., EV in C):</strong> may use different units</p></li>
+</ul>
+<p>### Extra Notes</p>
+<ul>
+<li><p><strong>NumPy Array Types:</strong>
+Be cautious when working with NumPy arrays to ensure proper type conversion. For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This may not produce the expected result:</span>
+<span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span> <span class="o">+</span> <span class="mf">1e-9</span>
+
+<span class="c1"># Specify the data type explicitly:</span>
+<span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span> <span class="o">+</span> <span class="mf">1e-9</span>
+
+<span class="c1"># Or use a helper function to ensure the correct type:</span>
+<span class="n">ensure_array_type</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span> <span class="o">+</span> <span class="mf">1e-9</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="satpy-tools">
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">Satpy_tools</a><a class="headerlink" href="#satpy-tools" title="Link to this heading">#</a></h3>
+<p>The <strong>Satpy_tools</strong> repository provides general satellite propagation functionality. Important points include:</p>
+<ul>
+<li><p><strong>Directory Structure:</strong>
+The main folder is <code class="docutils literal notranslate"><span class="pre">src</span></code>, which contains two key files:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">propagators.py</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">perturbs.py</span></code></p></li>
+</ul>
+</li>
+<li><p><strong>Key Functions:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">lightyear_prop_step()</span></code>:
+This function accepts arguments to control which perturbations are included and returns the satellite state at the requested times, the corresponding times, and ground flags (indicating if the satellite has hit the ground).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lightyear_prop()</span></code>:
+Use this function if you only require the final state of the propagation.</p></li>
+</ul>
+</li>
+<li><p><strong>Perturbations Available:</strong></p>
+<ul class="simple">
+<li><p>Spherical Harmonic Gravity of Earth</p></li>
+<li><p>Drag</p></li>
+<li><p>Solar Radiation Pressure (SRP)</p></li>
+<li><p>Earth Radiation Pressure</p></li>
+<li><p>Tides</p></li>
+<li><p>Sun Gravity</p></li>
+<li><p>Moon Gravity</p></li>
+<li><p>Coulomb Drag</p></li>
+<li><p>Lorentz Force</p></li>
+</ul>
+<p><em>Additionally, the following perturbations are implemented but are **not*</em> included in the lightyear dust propagation:*</p>
+<ul class="simple">
+<li><p>Venus Gravity</p></li>
+<li><p>Jupiter Gravity</p></li>
+<li><p>Relativity</p></li>
+</ul>
+</li>
+</ul>
+<p>### Notes for the Programmer</p>
+<ul class="simple">
+<li><p><strong>Private Functions:</strong>
+Functions that begin with an underscore (<code class="docutils literal notranslate"><span class="pre">_</span></code>) are intended for internal use and should not be called by end users.</p></li>
+</ul>
+<p>### Notes on Units (Satpy_tools)</p>
+<ul class="simple">
+<li><p><strong>Standard Units:</strong>
+As with NASA Dust, all inputs and outputs are in kilometers (km), kilograms (kg), seconds (s), and radians (rad) unless noted otherwise.</p></li>
+<li><p><strong>Exceptions:</strong>
+- <strong>Area-to-Mass Ratio:</strong> m²/kg
+- <strong>Object Radius (for propagator):</strong> meters (m)
+- <strong>Julian Date (jd):</strong> days</p></li>
+</ul>
+</section>
+</section>
+<section id="conclusion">
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Conclusion</a><a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
+<p>This document provides an overview of the installation, configuration, and core structure of both the NASA Dust simulation framework and the Satpy_tools satellite propagation toolkit. For further details, please refer to the source code and inline documentation within each module.</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">NASA Dust documentation</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="satpy_tools.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Satpy_tools</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-tutorial">Installation Tutorial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#codebase-overview">Codebase Overview</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nasa-dust">NASA Dust</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#satpy-tools">Satpy_tools</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Truman DeWalch, Riley Fitzgerald, Isaac Payne
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Truman DeWalch, Riley Fitzgerald, Isaac Payne.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

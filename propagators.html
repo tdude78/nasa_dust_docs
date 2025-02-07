@@ -1,0 +1,705 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Propagators &#8212; NASA Dust  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'propagators';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Perturbations" href="perturbs.html" />
+    <link rel="prev" title="Orbital Objects" href="orbitalobjects.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">NASA Dust  documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="homepage.html">NASA Dust and Satpy_tools Documentation</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="satpy_tools.html">Satpy_tools</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="orbitalobjects.html">Orbital Objects</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Propagators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="perturbs.html">Perturbations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conversions.html">Conversions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="sim_funcs.html">Sim Funcs</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/propagators.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Propagators</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.propagators.SGP4SAT"><code class="docutils literal notranslate"><span class="pre">SGP4SAT</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.propagators.SGP4SAT.jd"><code class="docutils literal notranslate"><span class="pre">SGP4SAT.jd</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.propagators.SGP4SAT.satellite"><code class="docutils literal notranslate"><span class="pre">SGP4SAT.satellite</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.propagators.SGP4SAT.get_equinoc_elems"><code class="docutils literal notranslate"><span class="pre">SGP4SAT.get_equinoc_elems()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.propagators.SGP4SAT.propagate_step"><code class="docutils literal notranslate"><span class="pre">SGP4SAT.propagate_step()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.propagators.SGP4SAT.propagate_to"><code class="docutils literal notranslate"><span class="pre">SGP4SAT.propagate_to()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.propagators.SGP4SAT.propagate_to_jd"><code class="docutils literal notranslate"><span class="pre">SGP4SAT.propagate_to_jd()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.propagators.KeplerianOrbit"><code class="docutils literal notranslate"><span class="pre">KeplerianOrbit</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.propagators.kepler_2body"><code class="docutils literal notranslate"><span class="pre">kepler_2body()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.propagators.kepler_2body_step"><code class="docutils literal notranslate"><span class="pre">kepler_2body_step()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.propagators.lightyear_prop"><code class="docutils literal notranslate"><span class="pre">lightyear_prop()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.propagators.lightyear_prop_step"><code class="docutils literal notranslate"><span class="pre">lightyear_prop_step()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.propagators.two_body"><code class="docutils literal notranslate"><span class="pre">two_body()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.propagators.two_body_step"><code class="docutils literal notranslate"><span class="pre">two_body_step()</span></code></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="propagators">
+<h1>Propagators<a class="headerlink" href="#propagators" title="Link to this heading">#</a></h1>
+<ol class="arabic simple">
+<li><p>SGP4 Wrapper</p></li>
+</ol>
+<dl class="py class">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.propagators.SGP4SAT">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src_dust.satpy_tools.src.propagators.</span></span><span class="sig-name descname"><span class="pre">SGP4SAT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elements</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2459714.2916666665</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.satpy_tools.src.propagators.SGP4SAT" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represents a satellite using the SGP4 propagation model.</p>
+<p>This class initializes a satellite with either classical orbital elements or
+Two-Line Element (TLE) sets and provides methods to propagate its state.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.propagators.SGP4SAT.jd">
+<span class="sig-name descname"><span class="pre">jd</span></span><a class="headerlink" href="#src_dust.satpy_tools.src.propagators.SGP4SAT.jd" title="Link to this definition">#</a></dt>
+<dd><p>Julian Date associated with the satellite’s epoch.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.propagators.SGP4SAT.satellite">
+<span class="sig-name descname"><span class="pre">satellite</span></span><a class="headerlink" href="#src_dust.satpy_tools.src.propagators.SGP4SAT.satellite" title="Link to this definition">#</a></dt>
+<dd><p>SGP4 satellite record from the sgp4 library.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Satrec</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.propagators.SGP4SAT.get_equinoc_elems">
+<span class="sig-name descname"><span class="pre">get_equinoc_elems</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time_days</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.satpy_tools.src.propagators.SGP4SAT.get_equinoc_elems" title="Link to this definition">#</a></dt>
+<dd><p>Returns the state vector in equinoctial elements at a specified time.</p>
+<p>The state vector format: [T, f, g, h, k, L, B*].</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>time_days</strong> (<em>float</em>) – The time in days at which to retrieve the equinoctial elements.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Array containing equinoctial elements [T, f, g, h, k, L, B*].</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.propagators.SGP4SAT.propagate_step">
+<span class="sig-name descname"><span class="pre">propagate_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time_days</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestep_s</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.satpy_tools.src.propagators.SGP4SAT.propagate_step" title="Link to this definition">#</a></dt>
+<dd><p>Propagates the satellite state in small increments up to a total specified time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>time_days</strong> (<em>float</em>) – The total time in days to propagate the satellite state.</p></li>
+<li><p><strong>timestep_s</strong> (<em>float</em><em>, </em><em>optional</em>) – The time step size in seconds. Defaults to 0.1 seconds.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Array of concatenated position and velocity vectors at each timestep.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.propagators.SGP4SAT.propagate_to">
+<span class="sig-name descname"><span class="pre">propagate_to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time_days</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.satpy_tools.src.propagators.SGP4SAT.propagate_to" title="Link to this definition">#</a></dt>
+<dd><p>Propagates the satellite state to a specified time using the SGP4 model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>time_days</strong> (<em>float</em>) – The time in days to propagate the satellite state to.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Concatenated array of position and velocity vectors [x, y, z, vx, vy, vz].</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>RuntimeError</strong> – If the SGP4 propagation returns an error code.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.propagators.SGP4SAT.propagate_to_jd">
+<span class="sig-name descname"><span class="pre">propagate_to_jd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prop_jd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.satpy_tools.src.propagators.SGP4SAT.propagate_to_jd" title="Link to this definition">#</a></dt>
+<dd><p>Propagates the satellite state to a specified time using the SGP4 model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>jd</strong> (<em>float</em>) – The Julian Date to propagate the satellite state to.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Concatenated array of position and velocity vectors [x, y, z, vx, vy, vz].</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>RuntimeError</strong> – If the SGP4 propagation returns an error code.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<ol class="arabic simple" start="2">
+<li><p>Keplerian Orbit</p></li>
+</ol>
+<dl class="py class">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.propagators.KeplerianOrbit">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src_dust.satpy_tools.src.propagators.</span></span><span class="sig-name descname"><span class="pre">KeplerianOrbit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ecc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raan</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aop</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ma0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">398600.4415</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.satpy_tools.src.propagators.KeplerianOrbit" title="Link to this definition">#</a></dt>
+<dd><p>Helper for computing position/velocity of Keplerian orbits</p>
+</dd></dl>
+
+<ol class="arabic simple" start="2">
+<li><p>Keplerian Function</p></li>
+</ol>
+<dl class="py function">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.propagators.kepler_2body">
+<span class="sig-prename descclassname"><span class="pre">src_dust.satpy_tools.src.propagators.</span></span><span class="sig-name descname"><span class="pre">kepler_2body</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">TOF_s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state0kep</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jd0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.satpy_tools.src.propagators.kepler_2body" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<ol class="arabic simple" start="3">
+<li><p>Keplerian Function, step</p></li>
+</ol>
+<dl class="py function">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.propagators.kepler_2body_step">
+<span class="sig-prename descclassname"><span class="pre">src_dust.satpy_tools.src.propagators.</span></span><span class="sig-name descname"><span class="pre">kepler_2body_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t_vals</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state0kep</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jd0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.satpy_tools.src.propagators.kepler_2body_step" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<ol class="arabic simple" start="4">
+<li><p>High Fidelity Propagators</p></li>
+</ol>
+<dl class="py function">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.propagators.lightyear_prop">
+<span class="sig-prename descclassname"><span class="pre">src_dust.satpy_tools.src.propagators.</span></span><span class="sig-name descname"><span class="pre">lightyear_prop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">TOF_s</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Am_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CD</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CR</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qm_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r_obj_m</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jd0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">np.float64(2460709.2946328013)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grav_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">7</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">perturbs_included</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['dust']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">perturbations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">ndarray</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src_dust.satpy_tools.src.propagators.lightyear_prop" title="Link to this definition">#</a></dt>
+<dd><p>Propagates a state vector using the 2-body problem model with various perturbations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state_0</strong> (<em>np.ndarray</em>) – The initial state vector [x, y, z, vx, vy, vz].</p></li>
+<li><p><strong>Am_ratio</strong> (<em>float</em>) – The area-to-mass ratio of the satellite.</p></li>
+<li><p><strong>CD</strong> (<em>float</em>) – The drag coefficient of the satellite.</p></li>
+<li><p><strong>CR</strong> (<em>float</em>) – The reflectivity coefficient of the satellite.</p></li>
+<li><p><strong>TOF_s</strong> (<em>float</em>) – The time of flight in seconds.</p></li>
+<li><p><strong>qm_ratio</strong> (<em>float</em><em>, </em><em>optional</em>) – The charge-to-mass ratio of the satellite. Defaults to 0.</p></li>
+<li><p><strong>r_obj_m</strong> (<em>float</em><em>, </em><em>optional</em>) – The radius of the object in meters. Defaults to 20e-6.</p></li>
+<li><p><strong>jd0</strong> (<em>float</em><em>, </em><em>optional</em>) – The Julian date. Defaults to NOW_JD.</p></li>
+<li><p><strong>grav_order</strong> (<em>int</em><em>, </em><em>optional</em>) – The order of the spherical harmonics expansion. Defaults to 7.</p></li>
+<li><p><strong>perturbs_included</strong> (<em>list</em><em>, </em><em>optional</em>) – The list of perturbations to include. Defaults to [“dust”].</p></li>
+<li><p><strong>eps</strong> (<em>float</em><em>, </em><em>optional</em>) – The tolerance for the integration. Defaults to PROPAGATOR_EPS.</p></li>
+<li><p><strong>perturbations</strong> (<a class="reference internal" href="perturbs.html#src_dust.satpy_tools.src.perturbs.Perturbations" title="src_dust.satpy_tools.src.perturbs.Perturbations"><em>Perturbations</em></a><em>, </em><em>optional</em>) – Precomputed perturbations object. Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>np.ndarray: The final state vector [x, y, z, vx, vy, vz].
+float: The final time.
+bool: A flag indicating if the satellite entered the Earth’s atmosphere.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<ol class="arabic simple" start="5">
+<li><p>High Fidelity Propagators, step</p></li>
+</ol>
+<dl class="py function">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.propagators.lightyear_prop_step">
+<span class="sig-prename descclassname"><span class="pre">src_dust.satpy_tools.src.propagators.</span></span><span class="sig-name descname"><span class="pre">lightyear_prop_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_vals</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Am_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CD</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CR</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qm_ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r_obj_m</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2e-05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jd0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2459714.2916666665</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grav_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">7</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">perturbs_included</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">['dust']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">perturbations_class</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.satpy_tools.src.propagators.lightyear_prop_step" title="Link to this definition">#</a></dt>
+<dd><p>Propagates a state vector in time with optional perturbations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state_0</strong> (<em>np.ndarray</em>) – The initial state vector [x, y, z, vx, vy, vz].</p></li>
+<li><p><strong>Am_ratio</strong> (<em>float</em>) – The area-to-mass ratio of the satellite.</p></li>
+<li><p><strong>CD</strong> (<em>float</em>) – The drag coefficient of the satellite.</p></li>
+<li><p><strong>CR</strong> (<em>float</em>) – The reflectivity coefficient of the satellite.</p></li>
+<li><p><strong>t_vals</strong> (<em>np.ndarray</em>) – The array of time values for integration.</p></li>
+<li><p><strong>qm_ratio</strong> (<em>float</em><em>, </em><em>optional</em>) – The charge-to-mass ratio of the satellite. Defaults to 0.</p></li>
+<li><p><strong>r_obj_m</strong> (<em>float</em><em>, </em><em>optional</em>) – The radius of the object in meters. Defaults to 20e-6.</p></li>
+<li><p><strong>jd0</strong> (<em>float</em><em>, </em><em>optional</em>) – The initial Julian Date. Defaults to JD_STANDARD.</p></li>
+<li><p><strong>grav_order</strong> (<em>int</em><em>, </em><em>optional</em>) – The order of the gravitational perturbations. Defaults to 7.</p></li>
+<li><p><strong>perturbs_included</strong> (<em>list</em><em>, </em><em>optional</em>) – The list of perturbations to include. Defaults to [“dust”].</p></li>
+<li><p><strong>eps</strong> (<em>float</em><em>, </em><em>optional</em>) – The tolerance for the integration. Defaults to PROPAGATOR_EPS.</p></li>
+<li><p><strong>perturbations_class</strong> (<a class="reference internal" href="perturbs.html#src_dust.satpy_tools.src.perturbs.Perturbations" title="src_dust.satpy_tools.src.perturbs.Perturbations"><em>Perturbations</em></a><em>, </em><em>optional</em>) – Precomputed perturbations object. Defaults to None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>np.ndarray: Array of propagated states.
+np.ndarray: Array of corresponding time values.
+int: Flag indicating if the orbit hit the ground (1) or not (0).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – If the initial state vector or time values are invalid.</p></li>
+<li><p><strong>_TerminationError</strong> – If the orbit hits the ground, leaves Earth, encounters NaNs, or becomes hyperbolic.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<ol class="arabic simple" start="6">
+<li><p>Two Body Propagator</p></li>
+</ol>
+<dl class="py function">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.propagators.two_body">
+<span class="sig-prename descclassname"><span class="pre">src_dust.satpy_tools.src.propagators.</span></span><span class="sig-name descname"><span class="pre">two_body</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">TOF_s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jd0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2459714.2916666665</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.satpy_tools.src.propagators.two_body" title="Link to this definition">#</a></dt>
+<dd><p>Propagates the given state vector using the two-body problem model for the specified time of flight.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state_0</strong> (<em>np.ndarray</em>) – The initial state vector [x, y, z, vx, vy, vz].</p></li>
+<li><p><strong>TOF_s</strong> (<em>float</em>) – The time of flight in seconds.</p></li>
+<li><p><strong>jd0</strong> (<em>float</em><em>, </em><em>optional</em>) – The initial Julian date. Defaults to JD_STANDARD.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The final state vector [x, y, z, vx, vy, vz].</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<ol class="arabic simple" start="7">
+<li><p>Two Body Propagator, step</p></li>
+</ol>
+<dl class="py function">
+<dt class="sig sig-object py" id="src_dust.satpy_tools.src.propagators.two_body_step">
+<span class="sig-prename descclassname"><span class="pre">src_dust.satpy_tools.src.propagators.</span></span><span class="sig-name descname"><span class="pre">two_body_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_vals</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jd0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2459714.2916666665</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src_dust.satpy_tools.src.propagators.two_body_step" title="Link to this definition">#</a></dt>
+<dd><p>Propagates a state vector using the two-body problem model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state_0</strong> (<em>np.ndarray</em>) – The initial state vector [x, y, z, vx, vy, vz].</p></li>
+<li><p><strong>t_vals</strong> (<em>np.ndarray</em>) – The array of time values for integration.</p></li>
+<li><p><strong>jd0</strong> (<em>float</em><em>, </em><em>optional</em>) – The initial Julian Date. Defaults to JD_STANDARD.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>np.ndarray: Array of propagated states.
+np.ndarray: Array of corresponding time values.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="orbitalobjects.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Orbital Objects</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="perturbs.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Perturbations</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.propagators.SGP4SAT"><code class="docutils literal notranslate"><span class="pre">SGP4SAT</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.propagators.SGP4SAT.jd"><code class="docutils literal notranslate"><span class="pre">SGP4SAT.jd</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.propagators.SGP4SAT.satellite"><code class="docutils literal notranslate"><span class="pre">SGP4SAT.satellite</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.propagators.SGP4SAT.get_equinoc_elems"><code class="docutils literal notranslate"><span class="pre">SGP4SAT.get_equinoc_elems()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.propagators.SGP4SAT.propagate_step"><code class="docutils literal notranslate"><span class="pre">SGP4SAT.propagate_step()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.propagators.SGP4SAT.propagate_to"><code class="docutils literal notranslate"><span class="pre">SGP4SAT.propagate_to()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.propagators.SGP4SAT.propagate_to_jd"><code class="docutils literal notranslate"><span class="pre">SGP4SAT.propagate_to_jd()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.propagators.KeplerianOrbit"><code class="docutils literal notranslate"><span class="pre">KeplerianOrbit</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.propagators.kepler_2body"><code class="docutils literal notranslate"><span class="pre">kepler_2body()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.propagators.kepler_2body_step"><code class="docutils literal notranslate"><span class="pre">kepler_2body_step()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.propagators.lightyear_prop"><code class="docutils literal notranslate"><span class="pre">lightyear_prop()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.propagators.lightyear_prop_step"><code class="docutils literal notranslate"><span class="pre">lightyear_prop_step()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.propagators.two_body"><code class="docutils literal notranslate"><span class="pre">two_body()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#src_dust.satpy_tools.src.propagators.two_body_step"><code class="docutils literal notranslate"><span class="pre">two_body_step()</span></code></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Truman DeWalch, Riley Fitzgerald, Isaac Payne
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Truman DeWalch, Riley Fitzgerald, Isaac Payne.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
